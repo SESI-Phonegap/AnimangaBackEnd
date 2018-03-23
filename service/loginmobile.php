@@ -1,19 +1,23 @@
 <?php
 
-include "service/utils/utilbd.php";
-include "service/utils/mysql.php";
-include "service/model/user.php";
+include "utils/utilbd.php";
+include "utils/mysql.php";
+include "../model/user.php";
 
 /*Login Mobile*/
 loginUser();
 
 function loginUser(){
-	 if (isset($_POST['login'])) {
-		 $jsonStr = urldecode($_POST['login']);
-		 $jsonObj = json_decode($jsonStr);
-		 $user =  $jsonObj->{'user'};
-	     $pass = $jsonObj->{'pass'};
-		 
+	 if (isset($_POST['userName']) && isset($_POST['pass'])) {
+	//	if(true){
+		// $jsonStr = urldecode($_POST['login']);
+		// $jsonObj = json_decode($jsonStr);
+		// $user =  $jsonObj->{'user'};
+	    // $pass = $jsonObj->{'pass'};
+		
+		$user =  $_POST['userName'];
+	    $pass = $_POST['pass'];
+		
 		 $usuario = null;
 		 
 		 if ($user != null && $pass != null) {
@@ -34,7 +38,9 @@ function loginUser(){
 			 }
 			 
 		} else {
-			//echo "KO: is not set ";
+			$data = array('estatus' => '404','error' => "Bad Request2");
+			$json = json_encode($data, JSON_PRETTY_PRINT);
+			echo $json;
 		}
 	 } else {
 		 $data = array('estatus' => '404','error' => "Bad Request");
