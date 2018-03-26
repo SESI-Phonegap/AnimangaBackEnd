@@ -19,6 +19,25 @@ class UtilBd{
 	  WHERE U_USER_NAME = '".$user."' AND U_PASSWORD = '".$passw."' ;";
   }
   
+  /*
+   *  Registro de nuevo usuario
+   *  
+   */
+   public static function registroNuevoUsuario($userName, $nombre, $sexo, $edad, $password, $email, $token){
+	   return "INSERT INTO TB_USER (U_USER_NAME,U_NOMBRE,U_SEXO,U_EDAD,U_PASSWORD,U_EMAIL,U_TOKEN_FIREBASE,U_COINS)
+			   VALUES ('".$userName."', '".$nombre."', '".$sexo."', ".$edad.", '".$password."', '".$email."', '".$token."', 500);";
+   }
+   
+  /*
+   *  Actualiza los items gemas o monedas
+   *
+   */
+   public static function updateGems($idUser,$gemas){
+	   return "UPDATE TB_USER
+			   SET U_COINS = ".$gemas.
+			   " WHERE U_ID_USER = ".$idUser." ;";
+   }
+  
  /*
   * Registro de preguntas
   */
