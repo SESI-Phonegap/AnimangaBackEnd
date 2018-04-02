@@ -70,6 +70,14 @@ class UtilBd{
   public static function getQuestionsByAnimeAndLevel($idAnime, $nivel){
 	  return "SELECT TB_PREGUNTAS.P_ID_PREGUNTA,
 					 TB_PREGUNTAS.P_PREGUNTA,
+					 TB_PREGUNTAS.P_PUNTOS
+			 FROM TB_PREGUNTAS
+			 WHERE TB_PREGUNTAS.P_ID_ANIME = ".$idAnime." AND TB_PREGUNTAS.P_NIVEL_DIFICULTAD = ".$nivel.
+             " ORDER BY RAND() LIMIT 20";
+  }
+/*  public static function getQuestionsByAnimeAndLevel($idAnime, $nivel){
+	  return "SELECT TB_PREGUNTAS.P_ID_PREGUNTA,
+					 TB_PREGUNTAS.P_PREGUNTA,
 					 TB_PREGUNTAS.P_PUNTOS,
 					 TB_RESPUESTAS.RES_ID_RESPUESTA,
 					 TB_RESPUESTAS.RES_RESPUESTA,
@@ -78,6 +86,20 @@ class UtilBd{
 			 INNER JOIN TB_RESPUESTAS ON TB_PREGUNTAS.P_ID_PREGUNTA = TB_RESPUESTAS.RES_ID_PREGUNTA 
 			 WHERE TB_PREGUNTAS.P_ID_ANIME = ".$idAnime." AND TB_PREGUNTAS.P_NIVEL_DIFICULTAD = ".$nivel.
 			 " ORDER BY RAND() LIMIT 20;";
+  }*/
+  
+  /*
+  * Obtiene las respuestas de la pregunta por ID en orden aleatorio
+  *  
+  */
+  public static function getAsnwersById($idQuestion){
+	  return "SELECT TB_RESPUESTAS.RE_ID_RESPUESTA,
+			         TB_RESPUESTAS.RE_RESPUESTA,
+					 TB_RESPUESTAS.RE_IS_CORRECT,
+					 TB_RESPUESTAS.RE_ID_PREGUNTA
+			 FROM TB_RESPUESTAS
+			 WHERE TB_RESPUESTAS.RE_ID_PREGUNTA = ".$idQuestion.
+             " ORDER BY RAND()";
   }
   
  /*

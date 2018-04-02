@@ -36,10 +36,11 @@ function loginUser(){
 				 $json = json_encode($data, JSON_PRETTY_PRINT);
 				 echo $json;
 			 }
-			 
+			 $db->closeConection();
 		} else {
 			$data = array('estatus' => '404','error' => "Bad Request2");
 			$json = json_encode($data, JSON_PRETTY_PRINT);
+			$db->closeConection();
 			echo $json;
 		}
 	 } else {
