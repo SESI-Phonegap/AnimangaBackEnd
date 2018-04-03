@@ -76,12 +76,12 @@ if ($user != null && $pass != null){
 
  	if($db->num_rows($loginQuery)>0){
  		
- 		echo "<script>window.location.replace('../serverquiz/registro.php');</script>";
+ 		echo "<script>window.location.replace('../AnimangaBackEnd/registro.php');</script>";
  	} else{
  		$db->closeConection();
  		echo "<script>
  		alert('Error: Ususario o contraseña invalidos');
- 		window.location.replace('../serverquiz/index.php');</script>";
+ 		window.location.replace('../AnimangaBackEnd/index.php');</script>";
  	}
 }
 

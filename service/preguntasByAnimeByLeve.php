@@ -28,10 +28,10 @@ function questionsByAnimeAndLevel(){
 			if($db->num_rows($loginConsulta)>0){
 				$queryQuestion = $db->consulta(UtilBd::getQuestionsByAnimeAndLevel($idanime,$level));
 				if($db->num_rows($queryQuestion) > 0){
+					$arrayPreguntas = array();
 					
 					while($result = $db->fetch_array($queryQuestion)){
-						$arrayPreguntas = array();
-					    $arrayRespuestas = array();
+						$arrayRespuestas = array();
 						$queryAnswers = $db->consulta(UtilBd::getAsnwersById($result['P_ID_PREGUNTA']));
 						if ($db->num_rows($queryAnswers) > 0){
 							while($resultA = $db->fetch_array($queryAnswers)){
@@ -47,8 +47,8 @@ function questionsByAnimeAndLevel(){
 					}
 					$data = array('preguntas' => $arrayPreguntas);
 					//print_r($data);
-					$json = json_encode($data);
-				    echo "JSON-- ".$json;
+					$json = json_encode($data,JSON_UNESCAPED_UNICODE);
+				    echo $json;
 				} else {
 					$data = array('estatus' => '204','error' => "No se encontraron registros");
 				    $json = json_encode($data, JSON_PRETTY_PRINT);

@@ -7,6 +7,7 @@ class Questions{
 	public $puntos;
 	public $arrayRespuestas;
 	
+
 	public function __construct($idQuestion,$question,$puntos,$arrayRespuestas){
 		$this->idQuestion = $idQuestion;
 		$this->question = $question;
