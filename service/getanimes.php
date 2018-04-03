@@ -7,12 +7,12 @@ include "../model/anime.php";
 getAllAnimes();
 
 function getAllAnimes(){
-	if (isset($_POST['userName']) && isset($_POST['pass']) )) {
+	if (isset($_POST['userName']) && isset($_POST['pass']) ) {
 		//if(true){
-		   /*$user =  $_POST['userName'];
-	         $pass = $_POST['pass'];*/
-			 $user = 'chris_slash10';
-			 $pass = 'Mexico-17';
+		     $user =  $_POST['userName'];
+	         $pass = $_POST['pass'];
+			 /*$user = 'chris_slash10';
+			 $pass = 'Mexico-17';*/
 			 
 			 if ($user != null && $pass != null) {
 				 $db = new MysqlCon();
