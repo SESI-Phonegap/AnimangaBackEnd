@@ -7,8 +7,8 @@ include "../model/anime.php";
 getAllAnimes();
 
 function getAllAnimes(){
-	//if (isset($_POST['userName']) && isset($_POST['pass']) )) {
-		if(true){
+	if (isset($_POST['userName']) && isset($_POST['pass']) )) {
+		//if(true){
 		   /*$user =  $_POST['userName'];
 	         $pass = $_POST['pass'];*/
 			 $user = 'chris_slash10';
