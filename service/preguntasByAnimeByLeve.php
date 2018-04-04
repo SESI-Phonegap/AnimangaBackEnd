@@ -8,16 +8,16 @@ include "../model/respuestas.php";
 questionsByAnimeAndLevel();
 
 function questionsByAnimeAndLevel(){
-	//if (isset($_POST['userName']) && isset($_POST['pass']) && isset($_POST['anime']) && isset($_POST['level'])) {
-		if(true){
-		/*$user =  $_POST['userName'];
+	if (isset($_POST['userName']) && isset($_POST['pass']) && isset($_POST['anime']) && isset($_POST['level'])) {
+		//if(true){
+		$user =  $_POST['userName'];
 	    $pass = $_POST['pass'];
 		$level = $_POST['level'];
-		$idanime = $_POST['anime'];*/
-		$user = 'chris_slash10';
+		$idanime = $_POST['anime'];
+	/*	$user = 'chris_slash10';
 	    $pass = 'Mexico-17';
 		$level = 1;
-		$idanime = 1;
+		$idanime = 1;*/
 		
 	//	$registros = array();
 		
