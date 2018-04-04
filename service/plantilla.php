@@ -4,7 +4,7 @@ include "utils/utilbd.php";
 include "utils/mysql.php";
 
 function getAllAnimes(){
-	//if (isset($_POST['userName']) && isset($_POST['pass']) )) {
+	//if (isset($_POST['userName']) && isset($_POST['pass']) ) {
 		if(true){
 		   /*$user =  $_POST['userName'];
 	         $pass = $_POST['pass'];*/

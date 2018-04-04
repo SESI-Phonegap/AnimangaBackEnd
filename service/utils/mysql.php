@@ -7,10 +7,14 @@ class MysqlCon{
   public $propiedad = "Variable miembro";
 
   public function conectar(){ 
-      $this->conexion = mysqli_connect('127.0.01:8889','root','root');
+  //MAMP MAC
+	  //$this->conexion = mysqli_connect('127.0.01:8889','root','root');
+  //WAMP Windows
+      $this->conexion = mysqli_connect('localhost:3306','root','');
      
       if($this->conexion){
          if (mysqli_select_db($this->conexion,"BD_ANIMANGAQUIZ")) {
+			 mysqli_set_charset($this->conexion,"utf8");
            return true;
          } else {
            //Si falla muestra el mensaje que el error está al acceder a la base de datos

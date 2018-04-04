@@ -108,16 +108,7 @@ class UtilBd{
   * Limite de 20 preguntas. 
   */
   public static function getQuestionsRandomByLevel($nivel){
-	  return "SELECT TB_PREGUNTAS.P_ID_PREGUNTA,
-					 TB_PREGUNTAS.P_PREGUNTA,
-					 TB_PREGUNTAS.P_PUNTOS,
-					 TB_RESPUESTAS.RES_ID_RESPUESTA,
-					 TB_RESPUESTAS.RES_RESPUESTA,
-					 TB_RESPUESTAS.RES_ISCORRECT
-			 FROM TB_PREGUNTAS
-			 INNER JOIN TB_RESPUESTAS ON TB_PREGUNTAS.P_ID_PREGUNTA = TB_RESPUESTAS.RES_ID_PREGUNTA 
-			 WHERE TB_PREGUNTAS.P_NIVEL_DIFICULTAD = ".$nivel." 
-			 ORDER BY RAND() LIMIT 20 ;";
+	  return "";
   }
 
   public static function getAllAnimes(){
