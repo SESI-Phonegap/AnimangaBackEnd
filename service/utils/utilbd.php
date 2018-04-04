@@ -25,7 +25,7 @@ class UtilBd{
    */
    public static function registroNuevoUsuario($userName, $nombre, $sexo, $edad, $password, $email, $token){
 	   return "INSERT INTO TB_USER (U_USER_NAME,U_NOMBRE,U_SEXO,U_EDAD,U_PASSWORD,U_EMAIL,U_TOKEN_FIREBASE,U_COINS)
-			   VALUES ('".$userName."', '".$nombre."', '".$sexo."', ".$edad.", '".$password."', '".$email."', '".$token."', 500);";
+			   VALUES ('".$userName."', '".$nombre."', '".$sexo."', ".$edad.", '".$password."', '".$email."', '".$token."', 3000);";
    }
    
   /*
@@ -43,6 +43,16 @@ class UtilBd{
   */
   public static function checkLevelAndScoreByUser($idUser, $idAnime){
 	  return "SELECT * FROM TB_SCORE_ANIME_USER WHERE SC_ID_ANIME = ".$idAnime. " AND SC_ID_USER = ".$idUser.";";
+  }
+  
+ /*
+  * Actualiza Score y Nivel del jugador en un anime
+  */
+  public static function updateScoreAndLevel($idScore,$idUser, $idAnime, $score, $level){
+	  return "UPDATE TB_SCORE_ANIME_USER 
+			  SET SC_SCORE = ".$score.",
+			  SET SC_NIVEL = ".$level.
+			" WHERE SC_ID_SCORE = ".$idScore." AND SC_ID_ANIME = ".$idAnime." AND SC_ID_USER = ".$idUser." ;";
   }
   
  /*
