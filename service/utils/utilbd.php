@@ -37,6 +37,21 @@ class UtilBd{
 			   SET U_COINS = ".$gemas.
 			   " WHERE U_ID_USER = ".$idUser." ;";
    }
+   
+ /*
+  * Checa el score y nivel de un usuario y un anime especifico
+  */
+  public static function checkLevelAndScoreByUser($idUser, $idAnime){
+	  return "SELECT * FROM TB_SCORE_ANIME_USER WHERE SC_ID_ANIME = ".$idAnime. " AND SC_ID_USER = ".$idUser.";";
+  }
+  
+ /*
+  * Inicializa el nivel en 1 y el score en 0 la primeravez que se juega
+  */
+  public static function initScore($idUser, $idAnime){
+	  return "INSERT INTO TB_SCORE_ANIME_USER (SC_SCORE,SC_NIVEL,SC_ID_ANIME,SC_ID_USER)
+	  VALUES (0,1,".$idAnime.",".$idUser.");";
+  }
   
  /*
   * Registro de preguntas
