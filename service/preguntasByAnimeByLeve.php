@@ -14,7 +14,7 @@ function questionsByAnimeAndLevel(){
 	    $pass = $_POST['pass'];
 		$level = $_POST['level'];
 		$idanime = $_POST['anime'];
-	/*	$user = 'chris_slash10';
+		/*$user = 'chris_slash10';
 	    $pass = 'Mexico-17';
 		$level = 1;
 		$idanime = 1;*/

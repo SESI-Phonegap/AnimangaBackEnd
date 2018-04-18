@@ -7,16 +7,16 @@ include "../model/score.php";
 ServieCheckLevelAndScorByUser();
 
 function ServieCheckLevelAndScorByUser(){
-	//if (isset($_POST['userName']) && isset($_POST['pass']) && isset($_POST['idanime']) && isset($_POST['iduser'])) {
-		if(true){
-		   /*$user =  $_POST['userName'];
+	if (isset($_POST['userName']) && isset($_POST['pass']) && isset($_POST['anime']) && isset($_POST['iduser'])) {
+		//if(true){
+		     $user =  $_POST['userName'];
 	         $pass = $_POST['pass'];
-			 $idAnime = $_POST['idanime']
-			 $idUser = $_POST['iduser'];*/
-			 $user = 'chris_slash10';
+			 $idAnime = $_POST['anime'];
+			 $idUser = $_POST['iduser'];
+			/* $user = 'chris_slash10';
 			 $pass = 'Mexico-17';
 			 $idAnime = 1;
-			 $idUser = 1;
+			 $idUser = 1;*/
 			 
 			 if ($user != null && $pass != null && $idUser != null && $idAnime != null) {
 				 $db = new MysqlCon();
@@ -30,9 +30,9 @@ function ServieCheckLevelAndScorByUser(){
 						 while($result = $db->fetch_array($queryScoreLevel)){
 							$scoreObj = new ScoreLevel($result['SC_ID_SCORE'],$result['SC_SCORE'],$result['SC_NIVEL'],$result['SC_ID_ANIME'],$result['SC_ID_USER']); 
 						 }
-						  $data = array('score' => $scoreObj);
+						  $data = array('estatus' => '200','score' => $scoreObj);
 						  //print_r($data);
-						  $json = json_encode($data,JSON_UNESCAPED_UNICODE);
+						  $json = json_encode($data,JSON_PRETTY_PRINT);
 						  echo $json;
 						 
 					 } else {
@@ -44,9 +44,9 @@ function ServieCheckLevelAndScorByUser(){
 								$scoreObj = new ScoreLevel($result['SC_ID_SCORE'],$result['SC_SCORE'],$result['SC_NIVEL'],$result['SC_ID_ANIME'],$result['SC_ID_USER']); 
 							}
 							
-							$data = array('score' => $scoreObj);
+							$data = array('estatus' => '200','score' => $scoreObj);
 							//print_r($data);
-							$json = json_encode($data,JSON_UNESCAPED_UNICODE);
+							$json = json_encode($data,JSON_PRETTY_PRINT);
 							echo $json;
 							
 						 } else {

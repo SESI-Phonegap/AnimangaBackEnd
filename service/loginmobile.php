@@ -9,12 +9,8 @@ loginUser();
 
 function loginUser(){
 	 if (isset($_POST['userName']) && isset($_POST['pass'])) {
-	//	if(true){
-		// $jsonStr = urldecode($_POST['login']);
-		// $jsonObj = json_decode($jsonStr);
-		// $user =  $jsonObj->{'user'};
-	    // $pass = $jsonObj->{'pass'};
-		
+		//if(true){
+	
 		$user =  $_POST['userName'];
 	    $pass = $_POST['pass'];
 		
