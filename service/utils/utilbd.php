@@ -24,8 +24,8 @@ class UtilBd{
    *  
    */
    public static function registroNuevoUsuario($userName, $nombre, $sexo, $edad, $password, $email, $token){
-	   return "INSERT INTO TB_USER (U_USER_NAME,U_NOMBRE,U_SEXO,U_EDAD,U_PASSWORD,U_EMAIL,U_TOKEN_FIREBASE,U_COINS)
-			   VALUES ('".$userName."', '".$nombre."', '".$sexo."', ".$edad.", '".$password."', '".$email."', '".$token."', 3000);";
+	   return "INSERT INTO TB_USER (U_USER_NAME,U_NOMBRE,U_SEXO,U_EDAD,U_PASSWORD,U_EMAIL,U_TOKEN_FIREBASE,U_COINS,U_TOTAL_SCORE)
+			   VALUES ('".$userName."', '".$nombre."', '".$sexo."', ".$edad.", '".$password."', '".$email."', '".$token."', 3000, 0);";
    }
    
   /*
@@ -35,6 +35,16 @@ class UtilBd{
    public static function updateGems($idUser,$gemas){
 	   return "UPDATE TB_USER
 			   SET U_COINS = ".$gemas.
+			   " WHERE U_ID_USER = ".$idUser." ;";
+   }
+   
+  /*
+   *  Actualiza el ScoreTotal de un usuario
+   *
+   */
+   public static function updateTotalScore($idUser,$score){
+	   return "UPDATE TB_USER
+			   SET U_TOTAL_SCORE = ".$score.
 			   " WHERE U_ID_USER = ".$idUser." ;";
    }
    
