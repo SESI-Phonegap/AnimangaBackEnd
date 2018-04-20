@@ -42,10 +42,10 @@ class UtilBd{
    *  Actualiza el ScoreTotal de un usuario
    *
    */
-   public static function updateTotalScore($idUser,$score){
+   public static function updateTotalScore($idUser){
 	   return "UPDATE TB_USER
-			   SET U_TOTAL_SCORE = ".$score.
-			   " WHERE U_ID_USER = ".$idUser." ;";
+			   SET U_TOTAL_SCORE = (SELECT SUM(SC_SCORE) FROM tb_score_anime_user WHERE SC_ID_USER = ".$idUser.")
+			   WHERE U_ID_USER = ".$idUser.";";
    }
    
  /*
@@ -61,7 +61,7 @@ class UtilBd{
   public static function updateScoreAndLevel($idScore,$idUser, $idAnime, $score, $level){
 	  return "UPDATE TB_SCORE_ANIME_USER 
 			  SET SC_SCORE = ".$score.",
-			  SET SC_NIVEL = ".$level.
+			      SC_NIVEL = ".$level.
 			" WHERE SC_ID_SCORE = ".$idScore." AND SC_ID_ANIME = ".$idAnime." AND SC_ID_USER = ".$idUser." ;";
   }
   
