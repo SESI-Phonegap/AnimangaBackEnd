@@ -75,7 +75,7 @@
     }
     
     function imagenAleatoria(){
-			var imagenes = ['bg1.jpg', 'bg2.jpg', 'bg3.png', 'bg4.jpg', 'bg5.png', 'bg6.png'];
+			var imagenes = ['bg1.png', 'bg2.jpg', 'bg3.png', 'bg4.jpg', 'bg5.png', 'bg6.png'];
 			$('#fondo').css({'background-image': 'url(images/' + imagenes[Math.floor(Math.random() * imagenes.length)] + ')'});
 		}
 	imagenAleatoria();

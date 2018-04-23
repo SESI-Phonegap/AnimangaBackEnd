@@ -10,11 +10,15 @@ class MysqlCon{
   //MAMP MAC
 	  //$this->conexion = mysqli_connect('127.0.01:8889','root','root');
   //WAMP Windows
-      $this->conexion = mysqli_connect('localhost:3306','root','');
+    //  $this->conexion = mysqli_connect('localhost:3306','root','');
+
+      //Produccion
+      $this->conexion = mysqli_connect('localhost:3306','despac40_chris_1','Mexico-17');
      
       if($this->conexion){
-         if (mysqli_select_db($this->conexion,"BD_ANIMANGAQUIZ")) {
-			 mysqli_set_charset($this->conexion,"utf8");
+        // if (mysqli_select_db($this->conexion,"BD_ANIMANGAQUIZ")) {
+        if (mysqli_select_db($this->conexion,"despac40_BD_ANIMANGAQUIZ")) {
+			      mysqli_set_charset($this->conexion,"utf8");
            return true;
          } else {
            //Si falla muestra el mensaje que el error está al acceder a la base de datos
