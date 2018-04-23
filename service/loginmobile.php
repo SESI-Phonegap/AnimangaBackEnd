@@ -13,6 +13,7 @@ function loginUser(){
 	
 		$user =  $_POST['userName'];
 	    $pass = $_POST['pass'];
+	
 		
 		 $usuario = null;
 		 
@@ -22,7 +23,7 @@ function loginUser(){
 			 $loginConsulta = $db->consulta(UtilBd::login($user,$pass));
 			 if($db->num_rows($loginConsulta)>0){
 				 while($result = $db->fetch_array($loginConsulta)){ 
-					$usuario = new User($result['U_ID_USER'],$result['U_USER_NAME'],$result['U_NOMBRE'],$result['U_SEXO'],$result['U_EDAD'],$result['U_PASSWORD'],$result['U_EMAIL'],$result['U_TOKEN_FIREBASE'],$result['U_COINS']);
+					$usuario = new User($result['U_ID_USER'],$result['U_USER_NAME'],$result['U_NOMBRE'],$result['U_SEXO'],$result['U_EDAD'],$result['U_PASSWORD'],$result['U_EMAIL'],$result['U_TOKEN_FIREBASE'],$result['U_COINS'],$result['U_TOTAL_SCORE']);
 				 }
 				 $data = array('estatus' => '200','user' => $usuario);
 				 $json = json_encode($data, JSON_PRETTY_PRINT);

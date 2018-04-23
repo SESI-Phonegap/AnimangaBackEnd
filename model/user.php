@@ -10,8 +10,9 @@ class User{
 	public $email;
 	public $token;
 	public $coins;
+	public $totalScore;
 	
-	 public function __construct($idUser, $userName, $name, $sexo, $edad, $password, $email, $token, $coins) {
+	 public function __construct($idUser, $userName, $name, $sexo, $edad, $password, $email, $token, $coins, $totalScore) {
 		 $this->idUser = $idUser;
 		 $this->userName = $userName;
 		 $this->name = $name;
@@ -21,6 +22,7 @@ class User{
 		 $this->email = $email;
 		 $this->token = $token;
 		 $this->coins = $coins;
+		 $this->totalScore = $totalScore;
 	 }
 }
 

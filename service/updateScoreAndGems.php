@@ -8,14 +8,14 @@ include "../model/score.php";
 serviceUpdateScoreAndGems();
 
 function serviceUpdateScoreAndGems(){
-	if (isset($_POST['userName']) && isset($_POST['pass']) && isset($_POST['gems']) && isset($_POST['score']) && isset($_POST['level']) && isset($_POST['idUser']) && isset($_POST['anime'])) {
+	if (isset($_POST['userName']) && isset($_POST['pass']) && isset($_POST['gems']) && isset($_POST['score']) && isset($_POST['level']) && isset($_POST['iduser']) && isset($_POST['anime'])) {
 		//if(true){
 		   $user =  $_POST['userName'];
 	         $pass = $_POST['pass'];
 			 $gems = $_POST['gems'];
 			 $score = $_POST['score'];
 			 $level = $_POST['level'];
-			 $idUser = $_POST['idUser'];
+			 $idUser = $_POST['iduser'];
 			 $idAnime = $_POST['anime'];
 			/* $user = 'chris_slash10';
 			 $pass = 'Mexico-17';
