@@ -149,6 +149,10 @@ class UtilBd{
   public static function getAllAnimes(){
   	return "SELECT * FROM TB_ANIME;";
   }
+  
+  public static function getWallpaperByAnime($idAnime){
+	  return "SELECT * FROM TB_RECOMPENSAS WHERE REC_ID_ANIME = ".$idAnime.";";
+  }
 }
 
 ?>
