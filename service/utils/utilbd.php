@@ -27,7 +27,24 @@ class UtilBd{
 	   return "INSERT INTO TB_USER (U_USER_NAME,U_NOMBRE,U_SEXO,U_EDAD,U_PASSWORD,U_EMAIL,U_TOKEN_FIREBASE,U_COINS,U_TOTAL_SCORE)
 			   VALUES ('".$userName."', '".$nombre."', '".$sexo."', ".$edad.", '".$password."', '".$email."', '".$token."', 3000, 0);";
    }
+   public static function registroNuevoUsuario($userName, $nombre, $sexo, $edad, $password, $email){
+	   return "INSERT INTO TB_USER (U_USER_NAME,U_NOMBRE,U_SEXO,U_EDAD,U_PASSWORD,U_EMAIL,U_TOKEN_FIREBASE,U_COINS,U_TOTAL_SCORE)
+			   VALUES ('".$userName."', '".$nombre."', '".$sexo."', ".$edad.", '".$password."', '".$email."', '', 5000, 0);";
+   }
    
+  /*
+   *  validar si existe un email
+   *
+   */
+   public static function checkEmail($email){
+	   return "SELECT U_EMAIL FROM TB_USER WHERE U_EMAIL = '".$email."' ;";
+   }
+   
+   public static function checkUserName($userName){
+	   return "SELECT U_USER_NAME FROM TB_USER WHERE U_USER_NAME = '".$userName."' ;";
+   }
+   
+  
   /*
    *  Actualiza los items gemas o monedas
    *
