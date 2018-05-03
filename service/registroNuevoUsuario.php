@@ -6,7 +6,9 @@ include "utils/mysql.php";
 nuevoUsuario();
 
 function nuevoUsuario(){
+
 		if (isset($_POST['userName']) && isset($_POST['pass']) && isset($_POST['nombre']) && isset($_POST['email']) && isset($_POST['edad']) && isset($_POST['genero'])) {
+
 			 $userName =  $_POST['userName'];
 	         $pass = $_POST['pass'];
 			 $nombre = $_POST['nombre'];
@@ -14,7 +16,6 @@ function nuevoUsuario(){
 			 $edad = $_POST['edad'];
 			 $genero = $_POST['genero'];
 			 
-			 if ($user != null && $pass != null && $gems != null && $idUser != null) {
 				 $db = new MysqlCon();
 				 $db->conectar();
 				 
@@ -50,11 +51,7 @@ function nuevoUsuario(){
 					  
 				  }
 				 
-			 }else{
-			        $data = array('estatus' => '404','error' => "Error !!");
-				    $json = json_encode($data, JSON_PRETTY_PRINT);
-				    echo $json;
-				  }
+		
 			 
 		}else{
 			$data = array('estatus' => '404','error' => "Bad Request");

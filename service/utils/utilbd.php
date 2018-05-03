@@ -23,10 +23,10 @@ class UtilBd{
    *  Registro de nuevo usuario
    *  
    */
-   public static function registroNuevoUsuario($userName, $nombre, $sexo, $edad, $password, $email, $token){
+   /*public static function registroNuevoUsuario($userName, $nombre, $sexo, $edad, $password, $email, $token){
 	   return "INSERT INTO TB_USER (U_USER_NAME,U_NOMBRE,U_SEXO,U_EDAD,U_PASSWORD,U_EMAIL,U_TOKEN_FIREBASE,U_COINS,U_TOTAL_SCORE)
 			   VALUES ('".$userName."', '".$nombre."', '".$sexo."', ".$edad.", '".$password."', '".$email."', '".$token."', 3000, 0);";
-   }
+   }*/
    public static function registroNuevoUsuario($userName, $nombre, $sexo, $edad, $password, $email){
 	   return "INSERT INTO TB_USER (U_USER_NAME,U_NOMBRE,U_SEXO,U_EDAD,U_PASSWORD,U_EMAIL,U_TOKEN_FIREBASE,U_COINS,U_TOTAL_SCORE)
 			   VALUES ('".$userName."', '".$nombre."', '".$sexo."', ".$edad.", '".$password."', '".$email."', '', 5000, 0);";
