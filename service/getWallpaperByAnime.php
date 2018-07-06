@@ -7,14 +7,12 @@ include "../model/wallpaper.php";
 getWallpaperByAnimes();
 
 function getWallpaperByAnimes(){
-	//if (isset($_POST['userName']) && isset($_POST['pass'] && isset($_POST['anime'])) ) {
-		if(true){
-		   /*$user =  $_POST['userName'];
+	if (isset($_POST['userName']) && isset($_POST['pass']) && isset($_POST['anime']) ) {
+		//if(true){
+		     $user =  $_POST['userName'];
 	         $pass = $_POST['pass'];
-			 $idAnime = $_POST['anime']*/
-			 $user = 'chris_slash10';
-			 $pass = 'Mexico-17';
-			 $idAnime = 1;
+			 $idAnime = $_POST['anime'];
+			
 			 
 			 if ($user != null && $pass != null && $idAnime != null) {
 				 $db = new MysqlCon();

@@ -7,7 +7,8 @@ nuevoUsuario();
 
 function nuevoUsuario(){
 
-		if (isset($_POST['userName']) && isset($_POST['pass']) && isset($_POST['nombre']) && isset($_POST['email']) && isset($_POST['edad']) && isset($_POST['genero'])) {
+		if (isset($_POST['userName']) && isset($_POST['pass']) && isset($_POST['nombre']) && isset($_POST['email']) 
+			&& isset($_POST['edad']) && isset($_POST['genero'])) {
 
 			 $userName =  $_POST['userName'];
 	         $pass = $_POST['pass'];

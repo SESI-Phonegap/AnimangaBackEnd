@@ -164,7 +164,7 @@ class UtilBd{
   }
 
   public static function getAllAnimes(){
-  	return "SELECT * FROM TB_ANIME;";
+  	return "SELECT * FROM TB_ANIME WHERE AN_ACTIVO = 1;";
   }
   
   public static function getWallpaperByAnime($idAnime){
