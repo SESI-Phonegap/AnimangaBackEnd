@@ -3,6 +3,7 @@
 include "utils/utilbd.php";
 include "utils/mysql.php";
 include "../model/score.php";
+include "../model/user.php";
 
 
 serviceUpdateScoreAndGems();
@@ -30,7 +31,16 @@ function serviceUpdateScoreAndGems(){
 				 $db->conectar();
 				 $_level = 1;
 				 $loginConsulta = $db->consulta(UtilBd::login($user,$pass));
+				 $userObj = null;
+				 $totalGems = 0;
 				 if($db->num_rows($loginConsulta)>0){
+
+				 	while ($resultado = $db->fetch_array($loginConsulta)) {
+				 		$userObj = new User($resultado['U_ID_USER'],$resultado['U_USER_NAME'],$resultado['U_NOMBRE'],$resultado['U_SEXO'],$resultado['U_EDAD'],$resultado['U_PASSWORD'],$resultado['U_EMAIL'],$resultado['U_TOKEN_FIREBASE'],$resultado['U_COINS'],$resultado['U_TOTAL_SCORE']);
+				 	}
+				 	$totalGems = $gems + $userObj->coins;
+
+
 					 $queryScoreLevel = $db->consulta(UtilBd::checkLevelAndScoreByUser($idUser,$idAnime));
 					 $scoreObj = null;
 					 if($db->num_rows($queryScoreLevel) > 0){
@@ -42,11 +52,15 @@ function serviceUpdateScoreAndGems(){
 						 if($_level < 4){
 							 $_level = $scoreObj->level + 1;
 						 }
+						 if ($score < $scoreObj->score) {
+						 	$score = $scoreObj->score;
+						 }
+
 						 $queryUpdateScoreLevel = $db->bConsulta(UtilBd::updateScoreAndLevel($scoreObj->idScore, $idUser, $idAnime, $score, $_level));
 						 
 						 if($queryUpdateScoreLevel){
 							 //actualiza las gemas
-							 $queryUpdateGemas = $db->bConsulta(UtilBd::updateGems($idUser,$gems));
+							 $queryUpdateGemas = $db->bConsulta(UtilBd::updateGems($idUser,$totalGems));
 							 if($queryUpdateGemas){
 								 
 								 $queryUpdateTotalScore = $db->bConsulta(UtilBd::updateTotalScore($idUser));

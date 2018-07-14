@@ -61,7 +61,7 @@ class UtilBd{
    */
    public static function updateTotalScore($idUser){
 	   return "UPDATE TB_USER
-			   SET U_TOTAL_SCORE = (SELECT SUM(SC_SCORE) FROM tb_score_anime_user WHERE SC_ID_USER = ".$idUser.")
+			   SET U_TOTAL_SCORE = (SELECT SUM(SC_SCORE) FROM TB_SCORE_ANIME_USER WHERE SC_ID_USER = ".$idUser.")
 			   WHERE U_ID_USER = ".$idUser.";";
    }
    
@@ -165,6 +165,10 @@ class UtilBd{
 
   public static function getAllAnimes(){
   	return "SELECT * FROM TB_ANIME WHERE AN_ACTIVO = 1;";
+  }
+
+  public static function getAllAnimesForWallpaper(){
+    return "SELECT * FROM TB_ANIME;";
   }
   
   public static function getWallpaperByAnime($idAnime){
