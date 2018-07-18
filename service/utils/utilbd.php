@@ -174,6 +174,11 @@ class UtilBd{
   public static function getWallpaperByAnime($idAnime){
 	  return "SELECT * FROM TB_RECOMPENSAS WHERE REC_ID_ANIME = ".$idAnime.";";
   }
+
+  public static function searchFriendeByUserName($userName){
+  	$sUserName = $userName.'%';
+  	return "SELECT U_ID_USER,U_NOMBRE,U_USER_NAME FROM TB_USER WHERE U_USER_NAME LIKE '".$sUserName."';"
+  }
 }
 
 ?>
