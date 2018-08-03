@@ -8,12 +8,13 @@ class MysqlCon{
 
   public function conectar(){ 
   //MAMP MAC
-	  //$this->conexion = mysqli_connect('127.0.01:8889','root','root');
+	  $this->conexion = mysqli_connect('127.0.01:8889','root','root');
+   // $this->conexion = mysqli_connect('localhost:8888','root','root');
   //WAMP Windows
     //  $this->conexion = mysqli_connect('localhost:3306','root','');
 
       //Produccion
-      $this->conexion = mysqli_connect('localhost:3306','despac40_chris_1','Mexico-17');
+    //  $this->conexion = mysqli_connect('localhost:3306','despac40_chris_1','Mexico-17');
      
       if($this->conexion){
         // if (mysqli_select_db($this->conexion,"BD_ANIMANGAQUIZ")) {

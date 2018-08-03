@@ -28,8 +28,8 @@ class UtilBd{
 			   VALUES ('".$userName."', '".$nombre."', '".$sexo."', ".$edad.", '".$password."', '".$email."', '".$token."', 3000, 0);";
    }*/
    public static function registroNuevoUsuario($userName, $nombre, $sexo, $edad, $password, $email){
-	   return "INSERT INTO TB_USER (U_USER_NAME,U_NOMBRE,U_SEXO,U_EDAD,U_PASSWORD,U_EMAIL,U_TOKEN_FIREBASE,U_COINS,U_TOTAL_SCORE)
-			   VALUES ('".$userName."', '".$nombre."', '".$sexo."', ".$edad.", '".$password."', '".$email."', '', 5000, 0);";
+	   return "INSERT INTO TB_USER (U_USER_NAME,U_NOMBRE,U_SEXO,U_EDAD,U_PASSWORD,U_EMAIL,U_TOKEN_FIREBASE,U_COINS,U_TOTAL_SCORE,U_IMG_USER)
+			   VALUES ('".$userName."', '".$nombre."', '".$sexo."', ".$edad.", '".$password."', '".$email."', '', 5000, 0,'');";
    }
    
   /*
@@ -177,8 +177,9 @@ class UtilBd{
 
   public static function searchFriendeByUserName($userName){
   	$sUserName = $userName.'%';
-  	return "SELECT U_ID_USER,U_NOMBRE,U_USER_NAME FROM TB_USER WHERE U_USER_NAME LIKE '".$sUserName."';"
+  	return "SELECT U_ID_USER,U_NOMBRE,U_USER_NAME,U_IMG_USER FROM TB_USER WHERE U_USER_NAME LIKE '".$sUserName."';";
   }
+  
 }
 
 ?>
