@@ -12,12 +12,12 @@ function questionsByAnime(){
 		//if(true){
 		     $user =  $_POST['userName'];
 	         $pass = $_POST['pass'];
-			 $idAnime = $_POST['anime']
+			 $idAnime = $_POST['anime'];
 			/* $user = 'chris_slash10';
 			 $pass = 'Mexico-17';
 			 $idAnime = 1;*/
 			 
-			 if ($user != null && $pass != null && $idAnime != null) {
+			 if($user != null && $pass != null && $idAnime != null) {
 				 $db = new MysqlCon();
 				 $db->conectar();
 				 $loginConsulta = $db->consulta(UtilBd::login($user,$pass));
