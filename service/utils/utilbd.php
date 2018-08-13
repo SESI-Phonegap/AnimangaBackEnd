@@ -180,6 +180,18 @@ class UtilBd{
   	return "SELECT U_ID_USER,U_NOMBRE,U_USER_NAME,U_IMG_USER FROM TB_USER WHERE U_USER_NAME LIKE '".$sUserName."';";
   }
 
+  public static function getAllFriendsByUser($idUser){
+    return "SELECT A1.U_ID_USER,
+    A2.U_NOMBRE,
+    A2.U_USER_NAME,
+    A2.U_IMG_USER,
+    B.UF_ID_FRIEND  
+    FROM TB_USER A1 
+    INNER JOIN TB_USER_FRIEND B ON A1.U_ID_USER =B.UF_ID_USER
+    INNER JOIN TB_USER A2 ON B.UF_ID_FRIEND = A2.U_ID_USER
+    WHERE A1.U_ID_USER =".$idUser;
+  }
+
   public static function addFriendById($idUser,$idFriend){
     return "INSERT INTO TB_USER_FRIEND(UF_ID_USER, UF_ID_FRIEND) VALUES (".$idUser.",".$idFriend.");";
   }
