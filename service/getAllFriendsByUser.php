@@ -8,14 +8,14 @@ include "../model/user.php";
 getAllFriendsByUser();
 
 function getAllFriendsByUser(){
-   // if (isset($_POST['userName']) && isset($_POST['pass'])) {
-		if(true){
+    if (isset($_POST['userName']) && isset($_POST['pass'])) {
+	//	if(true){
 	
-	/*	$user =  $_POST['userName'];
-        $pass = $_POST['pass'];*/
+		$user =  $_POST['userName'];
+        $pass = $_POST['pass'];
         
-        $user =  "chris_slash10";
-	    $pass = "Mexico-17";
+     /*   $user =  "chris_slash10";
+	    $pass = "Mexico-17";*/
 	 
         
         $usuario = null;
