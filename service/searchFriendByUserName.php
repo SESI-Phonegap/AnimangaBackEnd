@@ -58,7 +58,7 @@ function searchFriend(){
 						 null,$resultAmigos['U_IMG_USER']));
 					}
 				}
-				echo("<script>console.log(".json_encode($listAmigosActuales).");</script>");
+			//	echo("<script>console.log(".json_encode($listAmigosActuales).");</script>");
 
 			 	$buscarAmigosConsulta = $db->consulta(UtilBd::searchFriendeByUserName($userNameQuery));
 			 	if ($db->num_rows($buscarAmigosConsulta)>0) {
@@ -76,7 +76,7 @@ function searchFriend(){
 						 null,
 						 $result['U_IMG_USER']));
 					}
-					echo("<script>console.log(".json_encode($listFriends).");</script>");
+				//	echo("<script>console.log(".json_encode($listFriends).");</script>");
 					$listFilter = array();
 				    foreach($listFriends as $amigoQuery) {
 						$bIgual = false;
