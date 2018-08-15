@@ -23,7 +23,11 @@ function getWallpaperByAnimes(){
 					 if($db->num_rows($queryWallpaper) > 0){
 						 $listWallpaper = array();
 						 while($result = $db->fetch_array($queryWallpaper)){
-							 array_push($listWallpaper,new Wallpaper($result['REC_ID_RECOMPENSA'],$result['REC_URL'],$result['REC_URL_EXAMPLE'],$result['REC_ID_ANIME'],$result['REC_COSTO']));
+							 array_push($listWallpaper,new Wallpaper($result['REC_ID_RECOMPENSA'],
+							 $result['REC_URL'],
+							 $result['REC_URL_EXAMPLE'],
+							 $result['REC_ID_ANIME'],
+							 $result['REC_COSTO']));
 						 }
 						 $data = array('wallpapers' => $listWallpaper);
 						 //print_r($data);
