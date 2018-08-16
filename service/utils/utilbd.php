@@ -212,6 +212,14 @@ class UtilBd{
   public static function addFriendById($idUser,$idFriend){
     return "INSERT INTO TB_USER_FRIEND(UF_ID_USER, UF_ID_FRIEND) VALUES (".$idUser.",".$idFriend.");";
   }
+
+  public static function getAllAvatarsByUser($idUser){
+    return "SELECT REC_ID_RECOMPENSA,REC_URL
+    FROM TB_RECOMPENSAS R
+    INNER JOIN TB_USER_AVATAR A ON R.REC_ID_RECOMPENSA = A.UA_ID_AVATAR
+    INNER JOIN TB_USER U ON A.UA_ID_USER = U.U_ID_USER
+    WHERE U.U_ID_USER = ".$idUser;
+  }
   
 }
 ?>
