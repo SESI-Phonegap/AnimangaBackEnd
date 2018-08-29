@@ -57,9 +57,8 @@ function getAllFriendsByUser(){
 				    $json = json_encode($data, JSON_UNESCAPED_SLASHES);
 				    echo $json;
 				}else {
-                    $data = array('estatus' => '204','error' => "Todavia no tienes amigos");
-                    $json = json_encode($data, JSON_PRETTY_PRINT);
-                    echo $json;
+                    $json = '{"friends": []}';
+				    echo $json;
                 }
             }else {
 				 $data = array('estatus' => '204','error' => "No se encontraron registros");
