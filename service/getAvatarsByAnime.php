@@ -34,9 +34,8 @@ function getAvatarsByAnimes(){
 						 $json = json_encode($data,JSON_UNESCAPED_SLASHES);
 						 echo $json;
 					 } else {
-						 $data = array('estatus' => '204','error' => "No se encontraron registros");
-						 $json = json_encode($data, JSON_PRETTY_PRINT);
-						 echo $json;
+						$json = '{"wallpapers": []}';
+						echo $json;
 					 }
 				 }else {
 					$data = array('estatus' => '202','error' => "Credenciales incorrectas");
