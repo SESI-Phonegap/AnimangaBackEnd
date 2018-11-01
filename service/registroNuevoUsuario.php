@@ -7,9 +7,10 @@ nuevoUsuario();
 
 function nuevoUsuario(){
 
-		if (isset($_POST['userName']) && isset($_POST['pass']) && isset($_POST['nombre']) && isset($_POST['email']) 
+		if (isset($_POST['userNameFriend']) && isset($_POST['userName']) && isset($_POST['pass']) && isset($_POST['nombre']) && isset($_POST['email']) 
 			&& isset($_POST['edad']) && isset($_POST['genero'])) {
 
+			 $userNameFirend = $_POST['userNameFriend'];
 			 $userName =  $_POST['userName'];
 	         $pass = $_POST['pass'];
 			 $nombre = $_POST['nombre'];
@@ -40,6 +41,9 @@ function nuevoUsuario(){
 						  $nuevoUsuarioQuery = $db->bConsulta(UtilBd::registroNuevoUsuario($userName, $nombre, $genero, $edad, $pass, $email));
 						  
 						  if($nuevoUsuarioQuery){
+							  if($userNameFirend != ""){
+								$updateGemsFriend = $db->bConsulta(UtilBd::updateGemsUserName($userNameFirend));
+							  }
 							  $data = array('estatus' => '200','error' => "Registro exitoso !!");
 							  $json = json_encode($data, JSON_PRETTY_PRINT);
 							  echo $json;

@@ -54,6 +54,12 @@ class UtilBd{
 			   SET U_COINS = ".$gemas.
 			   " WHERE U_ID_USER = ".$idUser." ;";
    }
+
+   public static function updateGemsUserName($userName){
+    return "UPDATE TB_USER
+            SET U_COINS = ((SELECT U_COINS WHERE U_USER_NAME = '".$userName."') + 2500)
+            WHERE U_USER_NAME = '".$userName."'";
+  }
    
   /*
    *  Actualiza el ScoreTotal de un usuario
@@ -219,6 +225,12 @@ class UtilBd{
     INNER JOIN TB_USER_AVATAR A ON R.REC_ID_RECOMPENSA = A.UA_ID_AVATAR
     INNER JOIN TB_USER U ON A.UA_ID_USER = U.U_ID_USER
     WHERE U.U_ID_USER = ".$idUser;
+  }
+
+  public static function updateAvatarByUser($idUser,$b64Avatar){
+    return "UPDATE TB_USER
+    SET U_IMG_USER = '".$b64Avatar."'
+    WHERE U_ID_USER = ".$idUser;
   }
   
 }

@@ -28,8 +28,8 @@ function getAvatarsByUser(){
 							 array_push($listAvatar,new Wallpaper($result['REC_ID_RECOMPENSA'],
 							 $result['REC_URL'],
 							 "",
-							 "",
-							 ""));
+							 null,
+							 null));
 						 }
 						 $data = array('wallpapers' => $listAvatar);
 						 $json = json_encode($data,JSON_UNESCAPED_SLASHES);
