@@ -14,7 +14,7 @@ function updateAvatar(){
 			 $idUser = $_POST['iduser'];
 			 
 			 
-			 if ($user != null && $pass != null && $b64Avatar != null && $idUser != null) {
+			 if ($user != null && $b64Avatar != null && $idUser != null) {
 				 $db = new MysqlCon();
 				 $db->conectar();
 				 $loginConsulta = $db->consulta(UtilBd::login($user,$pass));

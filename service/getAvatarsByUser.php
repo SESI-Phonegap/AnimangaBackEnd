@@ -16,7 +16,7 @@ function getAvatarsByUser(){
            /* $user = "chris_slash10";
             $pass = "Mexico-17";
             $idUser = 1;*/
-			 if ($user != null && $pass != null && $idUser != null) {
+			 if ($user != null && $idUser != null) {
 				 $db = new MysqlCon();
 				 $db->conectar();
 				 $loginConsulta = $db->consulta(UtilBd::login($user,$pass));

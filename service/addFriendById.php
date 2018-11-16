@@ -11,7 +11,7 @@ function addFriend(){
         $idUser = $_POST['iduser'];
         $idFriend = $_POST['idFriend'];
 
-        if($user != null && $pass != null && $idUser != null && $idFriend != null) {
+        if($user != null && $idUser != null && $idFriend != null) {
             $db = new MysqlCon();
             $db->conectar();
             $loginConsulta = $db->consulta(UtilBd::login($user,$pass));

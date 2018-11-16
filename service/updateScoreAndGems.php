@@ -26,7 +26,7 @@ function serviceUpdateScoreAndGems(){
 			 $idUser = 1;
 			 $idAnime = 1;*/
 			 
-			 if ($user != null && $pass != null && $gems != null && $score != null && $level != null && $idUser != null && $idAnime != null) {
+			 if ($user != null && $gems != null && $score != null && $level != null && $idUser != null && $idAnime != null) {
 				 $db = new MysqlCon();
 				 $db->conectar();
 				 $_level = 1;

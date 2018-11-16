@@ -17,7 +17,7 @@ function questionsByAnime(){
 			 $pass = 'Mexico-17';
 			 $idAnime = 1;*/
 			 
-			 if($user != null && $pass != null && $idAnime != null) {
+			 if($user != null && $idAnime != null) {
 				 $db = new MysqlCon();
 				 $db->conectar();
 				 $loginConsulta = $db->consulta(UtilBd::login($user,$pass));

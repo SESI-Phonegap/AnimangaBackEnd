@@ -18,7 +18,7 @@ function ServieCheckLevelAndScorByUser(){
 			 $idAnime = 1;
 			 $idUser = 1;*/
 			 
-			 if ($user != null && $pass != null && $idUser != null && $idAnime != null) {
+			 if ($user != null && $idUser != null && $idAnime != null) {
 				 $db = new MysqlCon();
 				 $db->conectar();
 				 $loginConsulta = $db->consulta(UtilBd::login($user,$pass));

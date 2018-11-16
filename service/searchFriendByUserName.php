@@ -15,14 +15,14 @@ function searchFriend(){
 	    $pass = $_POST['pass'];
 	    $userNameQuery = $_POST['userNameQuery'];
 
-	  /*  $user =  "chris_slash109";
+	/*    $user =  "chris_slash109";
 	    $pass = "mmmn";
-	    $userNameQuery = "chr";
+	    $userNameQuery = "edga";
 	*/
 		
 		 $usuario = null;
 		 
-		 if ($user != null && $pass != null && $userNameQuery != null) {
+		 if ($user != null && $userNameQuery != null) {
 			 $db = new MysqlCon();
 			 $db->conectar();
 			 $loginConsulta = $db->consulta(UtilBd::login($user,$pass));

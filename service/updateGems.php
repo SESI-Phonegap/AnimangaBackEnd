@@ -12,7 +12,7 @@ function updateGemas(){
 			 $gems = $_POST['gems'];
 			 $idUser = $_POST['iduser'];
 			 
-			 if ($user != null && $pass != null && $gems != null && $idUser != null) {
+			 if ($user != null && $gems != null && $idUser != null) {
 				 $db = new MysqlCon();
 				 $db->conectar();
 				 $loginConsulta = $db->consulta(UtilBd::login($user,$pass));

@@ -19,7 +19,7 @@ function getAllFriendsByUser(){
 	 
         
         $usuario = null;
-        if ($user != null && $pass != null) {
+        if ($user != null) {
             $db = new MysqlCon();
             $db->conectar();
             $loginConsulta = $db->consulta(UtilBd::login($user,$pass));

@@ -187,7 +187,7 @@ class UtilBd{
 
   public static function searchFriendeByUserName($userName){
   	$sUserName = $userName.'%';
-  	return "SELECT U_ID_USER,U_NOMBRE,U_USER_NAME,U_IMG_USER FROM TB_USER WHERE U_USER_NAME LIKE '".$sUserName."';";
+  	return "SELECT U_ID_USER,U_NOMBRE,U_USER_NAME,U_IMG_USER FROM TB_USER WHERE U_NOMBRE LIKE '".$sUserName."';";
   }
 
   public static function getAllFriendsByUser($idUser){
@@ -231,6 +231,10 @@ class UtilBd{
     return "UPDATE TB_USER
     SET U_IMG_USER = '".$b64Avatar."'
     WHERE U_ID_USER = ".$idUser;
+  }
+
+  public static function validaUserFacebook($idUserName){
+    return "SELECT * FROM TB_USER WHERE U_USER_NAME = '".$idUserName."'";
   }
   
 }

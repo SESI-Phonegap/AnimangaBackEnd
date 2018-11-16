@@ -14,7 +14,7 @@ function getAllAnimes(){
 			 /*$user = 'chris_slash10';
 			 $pass = 'Mexico-17';*/
 			 
-			 if ($user != null && $pass != null) {
+			 if ($user != null) {
 				 $db = new MysqlCon();
 				 $db->conectar();
 				 $loginConsulta = $db->consulta(UtilBd::login($user,$pass));
