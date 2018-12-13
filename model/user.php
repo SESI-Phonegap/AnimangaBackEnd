@@ -12,8 +12,9 @@ class User{
 	public $coins;
 	public $totalScore;
 	public $imgUser;
+	public $esferas;
 	
-	 public function __construct($idUser, $userName, $name, $sexo, $edad, $password, $email, $token, $coins, $totalScore, $imgUser) {
+	 public function __construct($idUser, $userName, $name, $sexo, $edad, $password, $email, $token, $coins, $totalScore, $imgUser, $esferas) {
 		 $this->idUser = $idUser;
 		 $this->userName = $userName;
 		 $this->name = $name;
@@ -25,6 +26,7 @@ class User{
 		 $this->coins = $coins;
 		 $this->totalScore = $totalScore;
 		 $this->imgUser = $imgUser;
+		 $this->esferas = $esferas;
 	 }
 }
 

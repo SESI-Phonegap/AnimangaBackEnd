@@ -28,8 +28,8 @@ class UtilBd{
 			   VALUES ('".$userName."', '".$nombre."', '".$sexo."', ".$edad.", '".$password."', '".$email."', '".$token."', 3000, 0);";
    }*/
    public static function registroNuevoUsuario($userName, $nombre, $sexo, $edad, $password, $email){
-	   return "INSERT INTO TB_USER (U_USER_NAME,U_NOMBRE,U_SEXO,U_EDAD,U_PASSWORD,U_EMAIL,U_TOKEN_FIREBASE,U_COINS,U_TOTAL_SCORE,U_IMG_USER)
-			   VALUES ('".$userName."', '".$nombre."', '".$sexo."', ".$edad.", '".$password."', '".$email."', '', 5000, 0,'');";
+	   return "INSERT INTO TB_USER (U_USER_NAME,U_NOMBRE,U_SEXO,U_EDAD,U_PASSWORD,U_EMAIL,U_TOKEN_FIREBASE,U_COINS,U_TOTAL_SCORE,U_IMG_USER,U_ESFERAS)
+			   VALUES ('".$userName."', '".$nombre."', '".$sexo."', ".$edad.", '".$password."', '".$email."', '', 5000, 0,'',0);";
    }
    
   /*
@@ -235,6 +235,40 @@ class UtilBd{
 
   public static function validaUserFacebook($idUserName){
     return "SELECT * FROM TB_USER WHERE U_USER_NAME = '".$idUserName."'";
+  }
+
+  /*
+  * Actualiza las esferas de un usuario
+  */
+  public static function updateEsferasByUser($idUser, $esferas){
+	  return "UPDATE TB_USER 
+			  SET U_ESFERAS = ".$esferas.
+			" WHERE U_ID_USER = ".$idUser." ;";
+  }
+
+  /*
+  * Registro de preguntas (Adivina el personaje)
+  */
+  public static function registraPreguntaImg($pregunta, $idAnime, $puntos){
+	  return "INSERT INTO TB_QUIZ_IMG (Q_URL_IMG, Q_PUNTOS, Q_ID_ANIME)
+	  VALUES ('".$pregunta."' , ".$puntos.", ".$idAnime.") ;";
+  }
+  
+ /*
+  * Registro de respuestas (Adivina el personaje)
+  */
+  public static function registraRespuestaImg($idPregunta,$respuesta,$iscorrect){
+	  return "INSERT INTO TB_RESPUESTAS_QUIZ (REQU_RESPUESTA, REQU_IS_CORRECT, REQU_ID_PREGUNTA ) 
+    VALUES ('".$respuesta."',".$iscorrect.",".$idPregunta."); ";
+  }
+
+   /*
+  * Obtiene la ultima pregunta (Adivina el personaje) registrada para poder añadir sus respectivas respuestas  
+  */
+  public static function ultimaPreguntaAgregadaImg(){
+	  return "SELECT Q_ID_QUIZ
+	  FROM TB_QUIZ_IMG
+	  ORDER BY Q_ID_QUIZ DESC LIMIT 1";
   }
   
 }
