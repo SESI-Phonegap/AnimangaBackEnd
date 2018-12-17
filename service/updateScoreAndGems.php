@@ -36,7 +36,7 @@ function serviceUpdateScoreAndGems(){
 				 if($db->num_rows($loginConsulta)>0){
 
 				 	while ($resultado = $db->fetch_array($loginConsulta)) {
-				 		$userObj = new User($resultado['U_ID_USER'],$resultado['U_USER_NAME'],$resultado['U_NOMBRE'],$resultado['U_SEXO'],$resultado['U_EDAD'],$resultado['U_PASSWORD'],$resultado['U_EMAIL'],$resultado['U_TOKEN_FIREBASE'],$resultado['U_COINS'],$resultado['U_TOTAL_SCORE']);
+				 		$userObj = new User($resultado['U_ID_USER'],$resultado['U_USER_NAME'],$resultado['U_NOMBRE'],$resultado['U_SEXO'],$resultado['U_EDAD'],$resultado['U_PASSWORD'],$resultado['U_EMAIL'],$resultado['U_TOKEN_FIREBASE'],$resultado['U_COINS'],$resultado['U_TOTAL_SCORE'],$resultado['U_IMG_USER'],$resultado['U_ESFERAS']);
 				 	}
 				 	$totalGems = $gems + $userObj->coins;
 

@@ -169,8 +169,45 @@ class UtilBd{
 	  return "";
   }
 
+   /*
+  * Obtiene preguntas clasificados por un anime especifico de IMAGENES
+  * Limite de 20 preguntas. 
+  */
+  public static function getQuestionImg($idAnime){
+    return "SELECT TB_QUIZ_IMG.Q_ID_QUIZ,
+          TB_QUIZ_IMG.Q_URL_IMG,
+          TB_QUIZ_IMG.Q_PUNTOS
+          FROM TB_QUIZ_IMG
+          WHERE TB_QUIZ_IMG.Q_ID_ANIME = ".$idAnime.
+          " ORDER BY RAND() LIMIT 20";
+  }
+
+  /*
+  * Obtiene las respuestas de la pregunta por ID en orden aleatorio IMAGEN QUIZ
+  *  
+  */
+  public static function getAnswersByIdImg($idQuestion){
+    return "SELECT TB_RESPUESTAS_QUIZ.REQU_ID_RESPUESTA,
+          TB_RESPUESTAS_QUIZ.REQU_RESPUESTA,
+          TB_RESPUESTAS_QUIZ.REQU_IS_CORRECT,
+          TB_RESPUESTAS_QUIZ.REQU_ID_PREGUNTA
+          FROM TB_RESPUESTAS_QUIZ
+          WHERE TB_RESPUESTAS_QUIZ.REQU_ID_PREGUNTA = ".$idQuestion.
+          " ORDER BY RAND()";
+  }
+
+  /*
+  *Obtine los animes disponibles para quiz
+  */
   public static function getAllAnimes(){
   	return "SELECT * FROM TB_ANIME WHERE AN_ACTIVO = 1;";
+  }
+
+  /*
+  *Obtine los animes disponibles para IMG Quiz
+  */
+  public static function getAllAnimesImg(){
+  	return "SELECT * FROM TB_ANIME WHERE AN_ACTIVO_IMG = 1;";
   }
 
   public static function getAllAnimesForWallpaper(){

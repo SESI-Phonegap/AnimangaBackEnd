@@ -1,1 +1,20 @@
-AnimangaBackEnd/images/Quiz/dragonball/a21-2.png|20|1|Androide 21|Androide 19|Androide 15|Androide 22
+AnimangaBackEnd/images/Quiz/bleach/aizen1.png|20|2|Sosuke Aizen|Chad|Ulquiorra|Yachiru
+AnimangaBackEnd/images/Quiz/bleach/coyote1.png|20|2|Cayote|Ichigo|Chad|Grimmjow
+AnimangaBackEnd/images/Quiz/bleach/grimmjow.png|20|2|Grimmjow|Coyote|Gin|Ichigo
+AnimangaBackEnd/images/Quiz/bleach/ichigo1.png|20|2|Ichigo|Chad|Kiuke|Coyote
+AnimangaBackEnd/images/Quiz/bleach/ichigo2.png|20|2|Ichigo|Uryu|Gin|Mayuri
+AnimangaBackEnd/images/Quiz/bleach/ichigo3.png|20|2|Ichigo|Coyote|Chad|Kisuke
+AnimangaBackEnd/images/Quiz/bleach/ichigo4.png|20|2|Ichigo|Grimmjow|Chad|Gin
+AnimangaBackEnd/images/Quiz/bleach/ichigo5.png|20|2|Ichigo|Gin|Coyote|Rukia
+AnimangaBackEnd/images/Quiz/bleach/ishida1.png|20|2|Ishida|Ichigo|Chad|Coyote
+AnimangaBackEnd/images/Quiz/bleach/mayuri1.png|20|2|Mayuri|Kisuke|Ishida|Ichigo
+AnimangaBackEnd/images/Quiz/bleach/orihime1.png|20|2|Orihime|Rukia|Byakuya|Yachiru
+AnimangaBackEnd/images/Quiz/bleach/rangiku1.png|20|2|Rangiku|Sui|Rukia|Orihime
+AnimangaBackEnd/images/Quiz/bleach/renji1.png|20|2|Renji|Yoruichi|Kenpachi|Gin
+AnimangaBackEnd/images/Quiz/bleach/renji2.png|20|2|Renji|Gin|Coyote|Ichigo
+AnimangaBackEnd/images/Quiz/bleach/rukia1.png|20|2|Rukia|Orihime|Yoruichi|Sui
+AnimangaBackEnd/images/Quiz/bleach/rukia2.png|20|2|Rukia|Orihime|Sui|Yachiru
+AnimangaBackEnd/images/Quiz/bleach/toshiro1.png|20|2|Toshiro|Grimmjow|Chad|Ichigo
+AnimangaBackEnd/images/Quiz/bleach/ulquiorra1.png|20|2|Ulquiorra|Aizen|Chad|Mayuri
+AnimangaBackEnd/images/Quiz/bleach/urahara1.png|20|2|Urahara|Ishida|Coyote|Grimmjow
+AnimangaBackEnd/images/Quiz/bleach/yachiru1.png|20|2|Yachiru|Orihime|Rukia|Sui
