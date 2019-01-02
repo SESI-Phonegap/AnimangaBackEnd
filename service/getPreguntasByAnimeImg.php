@@ -8,14 +8,14 @@ include "../model/respuestas.php";
 questionsByAnimeImg();
 
 function questionsByAnimeImg(){
-	//if (isset($_POST['userName']) && isset($_POST['pass']) && isset($_POST['anime'])) {
-		if(true){
-		/*$user =  $_POST['userName'];
+	if (isset($_POST['userName']) && isset($_POST['pass']) && isset($_POST['anime'])) {
+		//if(true){
+		$user =  $_POST['userName'];
 	    $pass = $_POST['pass'];
-        $idanime = $_POST['anime'];*/
-        $user = 'chris_slash10';
+        $idanime = $_POST['anime'];
+        /*$user = 'chris_slash10';
 	    $pass = 'Mexico-17';
-		$idanime = 1;
+		$idanime = 1;*/
 		
 		if ($user != null && $idanime != null) {
 		    $db = new MysqlCon();
