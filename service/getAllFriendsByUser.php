@@ -35,7 +35,8 @@ function getAllFriendsByUser(){
 					$resultLogin['U_TOKEN_FIREBASE'],
 					$resultLogin['U_COINS'],
 					$resultLogin['U_TOTAL_SCORE'],
-					$resultLogin['U_IMG_USER']);
+					$resultLogin['U_IMG_USER'],
+					$resultLogin['U_ESFERAS']);
                 }
                 $listAmigosActuales = array();
                 $amigosActualesQuery = $db->consulta(UtilBd::getAllFriendsScoreByUser($usuario->idUser));
@@ -51,7 +52,8 @@ function getAllFriendsByUser(){
 						 "",
 						 null,
                          $resultAmigos['U_TOTAL_SCORE'],
-                         $resultAmigos['U_IMG_USER']));
+                         $resultAmigos['U_IMG_USER'],
+						 $resultLogin['U_ESFERAS']));
                     }
                     $data = array('friends' => $listAmigosActuales);
 				    $json = json_encode($data, JSON_UNESCAPED_SLASHES);

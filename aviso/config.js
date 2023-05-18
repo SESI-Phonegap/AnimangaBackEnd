@@ -1,0 +1,1 @@
+IDRViewer.config = {"pagecount":2,"title":"","author":"Microsoft Office User","fileName":"Aviso_de_privacidad_AnimangaQuiz.pdf","bounds":[[934,1209],[934,1209]],"bookmarks":[],"thumbnailType":"jpg","pageType":"html","pageLabels":[]};
