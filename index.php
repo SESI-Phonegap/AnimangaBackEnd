@@ -7,7 +7,6 @@
 <!--===============================================================================================-->
 	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
 <!--===============================================================================================-->
@@ -28,6 +27,7 @@
 	<link rel="stylesheet" type="text/css" href="css/util.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 <!--===============================================================================================-->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
 </head>
 <body>
 
@@ -68,20 +68,25 @@ include "service/utils/mysql.php";
 $user = $_POST['user'];
 $pass = $_POST['pass'];
 
+
+
 if ($user != null && $pass != null){
+	echo "<script>
+	console.log('LOG')
+ 		console.log('User: ".$user." Pass: ".$pass."'); </script>";
+
 	 $db = new MysqlCon();
 	 $db->conectar();
 
 	$loginQuery = $db->consulta(UtilBd::loginWeb($user,$pass));
 
  	if($db->num_rows($loginQuery)>0){
- 		
- 		echo "<script>window.location.replace('../AnimangaBackEnd/registro.php');</script>";
+ 		echo "<script>window.location.replace('../registro.php');</script>";
  	} else{
  		$db->closeConection();
  		echo "<script>
  		alert('Error: Ususario o contraseña invalidos');
- 		window.location.replace('../AnimangaBackEnd/index.php');</script>";
+ 		window.location.replace('../index.php');</script>";
  	}
 }
 
@@ -102,8 +107,7 @@ if($db->num_rows($consultaAnimes)>0){
 <!--===============================================================================================-->
 	<script src="vendor/animsition/js/animsition.min.js"></script>
 <!--===============================================================================================-->
-	<script src="vendor/bootstrap/js/popper.js"></script>
-	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 <!--===============================================================================================-->
 	<script src="vendor/select2/select2.min.js"></script>
 	<script>

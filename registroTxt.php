@@ -10,7 +10,6 @@ $fp = fopen("fichero.txt", "r");
 while(!feof($fp)) {
 
 $linea = fgets($fp);
-echo "Linea- ".$linea."<br>";
 $lineaArray = explode("|",$linea);
 $pregunta = $lineaArray[0];
 $nivel = $lineaArray[1];

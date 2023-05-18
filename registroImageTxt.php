@@ -1,5 +1,3 @@
-
-application/x-httpd-php registroImageTxt.php ( PHP script, ASCII text )
 <?php
 include "service/utils/utilbd.php";
 include "service/utils/mysql.php";

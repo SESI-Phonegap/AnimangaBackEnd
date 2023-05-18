@@ -7,28 +7,16 @@ class MysqlCon{
   public $propiedad = "Variable miembro";
 
   public function conectar(){ 
-  //MAMP MAC
-	  $this->conexion = mysqli_connect('127.0.01:8889','root','root');
-   // $this->conexion = mysqli_connect('localhost:8888','root','root');
-  //WAMP Windows
-    //  $this->conexion = mysqli_connect('localhost:3306','root','');
 
       //Produccion
-    //  $this->conexion = mysqli_connect('localhost:3306','despac40_chris_1','Mexico-17');
+      $this->conexion = new mysqli('localhost','root','Abril1531Mexic@','animanga','3306');//mysqli_connect('192.168.1.66','root','Abril1531Mexic@','animanga','3306');
      
-      if($this->conexion){
-        // if (mysqli_select_db($this->conexion,"BD_ANIMANGAQUIZ")) {
-        if (mysqli_select_db($this->conexion,"despac40_BD_ANIMANGAQUIZ")) {
-			      mysqli_set_charset($this->conexion,"utf8");
-           return true;
-         } else {
-           //Si falla muestra el mensaje que el error está al acceder a la base de datos
-           echo "No se pudo seleccionar la bd";
-         }
+      if($this->conexion -> connect_errno){
+        echo "<script>console.log('Conexion Exitosa')</script>";
+        
       }  else {
         //Si falla la conexión con la base de datos se muestra el mensaje
-         echo "No se pudo conectar a la bd"."<br>";
-         echo "error de depuración: " . mysqli_connect_errno();
+         //echo "Falló la conexión: %s\n",  $this->conexion->connect_error;
       }
   }
 
@@ -37,12 +25,7 @@ class MysqlCon{
   }
   
   public function consulta($consulta){ 
-   // $this->total_consultas++; 
-    $resultado = mysqli_query($this->conexion,$consulta);
-    if(!$resultado){ 
-      echo 'MySQL Error: ' . mysqli_error();
-      exit;
-    }
+    $resultado = $this->conexion->query($consulta);
     return $resultado;
   }
   
