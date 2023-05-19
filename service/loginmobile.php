@@ -8,19 +8,18 @@ include "../model/user.php";
 loginUser();
 
 function loginUser(){
-	 if (isset($_POST['userName']) && isset($_POST['pass'])) {
-		//if(true){
+	 if (isset($_POST['email']) && isset($_POST['pass'])) {
 	
-		$user =  $_POST['userName'];
+		$email =  $_POST['email'];
+		$email = urldecode($email);
 	    $pass = $_POST['pass'];
-	
-		
-		 $usuario = null;
+		$usuario = null;
+
 		 
-		 if ($user != null) {
+		 if ($email != null) {
 			 $db = new MysqlCon();
 			 $db->conectar();
-			 $loginConsulta = $db->consulta(UtilBd::login($user,$pass));
+			 $loginConsulta = $db->consulta(UtilBd::login($email,$pass));
 			 if($db->num_rows($loginConsulta)>0){
 				 while($result = $db->fetch_array($loginConsulta)){ 
 					$usuario = new User($result['U_ID_USER'],

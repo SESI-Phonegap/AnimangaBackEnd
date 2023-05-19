@@ -4,10 +4,10 @@ class UtilBd{
  /*
   * Login para la app android
   */
-	public static function login($user, $passw){
+	public static function login($email, $passw){
 	  return "SELECT * 
 	  FROM TB_USER 
-	  WHERE U_USER_NAME = '".$user."' AND U_PASSWORD = '".$passw."';";
+	  WHERE U_EMAIL = '".$email."' AND U_PASSWORD = '".$passw."';";
   }
   
  /*
@@ -16,7 +16,7 @@ class UtilBd{
   public static function loginWeb($user, $passw){
 	  return "SELECT U_USER_NAME, U_PASSWORD 
 	  FROM TB_USER 
-	  WHERE U_USER_NAME = '".$user."' AND U_PASSWORD = '".$passw."' ;";
+	  WHERE U_EMAIL = '".$user."' AND U_PASSWORD = '".$passw."' ;";
   }
   
   /*
