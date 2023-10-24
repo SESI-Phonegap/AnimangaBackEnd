@@ -12,6 +12,7 @@ function searchFriend(){
 		//if(true){
 	
 		$user =  $_POST['userName'];
+		$user = urldecode($user);
 	    $pass = $_POST['pass'];
 	    $userNameQuery = $_POST['userNameQuery'];
 
@@ -39,7 +40,9 @@ function searchFriend(){
 					$resultLogin['U_TOKEN_FIREBASE'],
 					$resultLogin['U_COINS'],
 					$resultLogin['U_TOTAL_SCORE'],
-					$resultLogin['U_IMG_USER']);
+					$resultLogin['U_IMG_USER'],
+					$resultLogin['U_ESFERAS']
+				);
 				}
 
 				$listAmigosActuales = array();
@@ -55,7 +58,9 @@ function searchFriend(){
 						 "",
 						 "",
 						 null,
-						 null,$resultAmigos['U_IMG_USER']));
+						 null,
+						 $resultAmigos['U_IMG_USER'],
+						 $resultAmigos['U_ESFERAS']));
 					}
 				}
 			//	echo("<script>console.log(".json_encode($listAmigosActuales).");</script>");
@@ -74,7 +79,8 @@ function searchFriend(){
 						 "",
 						 null,
 						 null,
-						 $result['U_IMG_USER']));
+						 $result['U_IMG_USER'],
+						 $result['U_ESFERAS']));
 					}
 				//	echo("<script>console.log(".json_encode($listFriends).");</script>");
 					$listFilter = array();
