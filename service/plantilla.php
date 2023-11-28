@@ -9,6 +9,7 @@ function getAllAnimes(){
 		   /*$user =  $_POST['userName'];
 	         $pass = $_POST['pass'];*/
 			 $user = 'chris_slash10';
+			 $user = urldecode($user);
 			 $pass = 'Mexico-17';
 			 
 			 if ($user != null && $pass != null && $level != null && $idanime != null) {

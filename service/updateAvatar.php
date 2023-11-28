@@ -9,6 +9,7 @@ function updateAvatar(){
 		if (isset($_POST['userName']) && isset($_POST['pass']) && isset($_POST['iduser']) && isset($_POST['b64Avatar'])) {
 		//if(true){
 			 $user =  $_POST['userName'];
+			 $user = urldecode($user);
 	         $pass = $_POST['pass'];
 			 $b64Avatar = $_POST['b64Avatar'];
 			 $idUser = $_POST['iduser'];

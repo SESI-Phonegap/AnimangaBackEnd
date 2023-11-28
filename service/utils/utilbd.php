@@ -10,6 +10,9 @@ class UtilBd{
 	  WHERE U_EMAIL = '".$email."' AND U_PASSWORD = '".$passw."';";
   }
   
+  public static function deleteUserAccount($idUser){
+    return "DELETE FROM TB_USER WHERE U_ID_USER = ".$idUser.";";
+  }
  /*
   * Login para la app web
   */

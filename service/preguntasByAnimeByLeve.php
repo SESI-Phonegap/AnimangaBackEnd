@@ -5,12 +5,14 @@ include "utils/mysql.php";
 include "../model/questions.php";
 include "../model/respuestas.php";
 
+
 questionsByAnimeAndLevel();
 
 function questionsByAnimeAndLevel(){
 	if (isset($_POST['userName']) && isset($_POST['pass']) && isset($_POST['anime']) && isset($_POST['level'])) {
 		//if(true){
 		$user =  $_POST['userName'];
+		$user = urldecode($user);
 	    $pass = $_POST['pass'];
 		$level = $_POST['level'];
 		$idanime = $_POST['anime'];
@@ -47,7 +49,7 @@ function questionsByAnimeAndLevel(){
 					}
 					$data = array('preguntas' => $arrayPreguntas);
 					//print_r($data);
-					$json = json_encode($data,JSON_UNESCAPED_UNICODE);
+					$json = json_encode($data);
 				    echo $json;
 				} else {
 					$data = array('estatus' => '204','error' => "No se encontraron registros");

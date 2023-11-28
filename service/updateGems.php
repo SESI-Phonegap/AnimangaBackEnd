@@ -8,6 +8,7 @@ updateGemas();
 function updateGemas(){
 		if (isset($_POST['userName']) && isset($_POST['pass']) && isset($_POST['iduser']) && isset($_POST['gems'])) {
 			 $user =  $_POST['userName'];
+			 $user = urldecode($user);
 	         $pass = $_POST['pass'];
 			 $gems = $_POST['gems'];
 			 $idUser = $_POST['iduser'];

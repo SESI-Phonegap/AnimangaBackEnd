@@ -1,0 +1,64 @@
+[24-Oct-2023 01:32:44 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function User::__construct(), 11 passed in /home/chrisste/public_html/AnimangaBackEnd/service/searchFriendByUserName.php on line 42 and exactly 12 expected in /home/chrisste/public_html/AnimangaBackEnd/model/user.php:17
+Stack trace:
+#0 /home/chrisste/public_html/AnimangaBackEnd/service/searchFriendByUserName.php(42): User->__construct('1', 'chris_slash10', 'Christian Ivan ...', 'H', '28', 'Mexico-17', 'christian.100@g...', '', '44200', '14880', '/9j/4AAQSkZJRgA...')
+#1 /home/chrisste/public_html/AnimangaBackEnd/service/searchFriendByUserName.php(8): searchFriend()
+#2 {main}
+  thrown in /home/chrisste/public_html/AnimangaBackEnd/model/user.php on line 17
+[24-Oct-2023 01:32:46 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function User::__construct(), 11 passed in /home/chrisste/public_html/AnimangaBackEnd/service/searchFriendByUserName.php on line 42 and exactly 12 expected in /home/chrisste/public_html/AnimangaBackEnd/model/user.php:17
+Stack trace:
+#0 /home/chrisste/public_html/AnimangaBackEnd/service/searchFriendByUserName.php(42): User->__construct('1', 'chris_slash10', 'Christian Ivan ...', 'H', '28', 'Mexico-17', 'christian.100@g...', '', '44200', '14880', '/9j/4AAQSkZJRgA...')
+#1 /home/chrisste/public_html/AnimangaBackEnd/service/searchFriendByUserName.php(8): searchFriend()
+#2 {main}
+  thrown in /home/chrisste/public_html/AnimangaBackEnd/model/user.php on line 17
+[24-Oct-2023 01:39:04 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function User::__construct(), 11 passed in /home/chrisste/public_html/AnimangaBackEnd/service/searchFriendByUserName.php on line 42 and exactly 12 expected in /home/chrisste/public_html/AnimangaBackEnd/model/user.php:17
+Stack trace:
+#0 /home/chrisste/public_html/AnimangaBackEnd/service/searchFriendByUserName.php(42): User->__construct('1', 'chris_slash10', 'Christian Ivan ...', 'H', '28', 'Mexico-17', 'christian.100@g...', '', '44200', '14880', '/9j/4AAQSkZJRgA...')
+#1 /home/chrisste/public_html/AnimangaBackEnd/service/searchFriendByUserName.php(8): searchFriend()
+#2 {main}
+  thrown in /home/chrisste/public_html/AnimangaBackEnd/model/user.php on line 17
+[24-Oct-2023 01:53:48 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function User::__construct(), 11 passed in /home/chrisste/public_html/AnimangaBackEnd/service/searchFriendByUserName.php on line 42 and exactly 12 expected in /home/chrisste/public_html/AnimangaBackEnd/model/user.php:17
+Stack trace:
+#0 /home/chrisste/public_html/AnimangaBackEnd/service/searchFriendByUserName.php(42): User->__construct('1', 'chris_slash10', 'Christian Ivan ...', 'H', '28', 'Mexico-17', 'christian.100@g...', '', '44200', '14880', '/9j/4AAQSkZJRgA...')
+#1 /home/chrisste/public_html/AnimangaBackEnd/service/searchFriendByUserName.php(8): searchFriend()
+#2 {main}
+  thrown in /home/chrisste/public_html/AnimangaBackEnd/model/user.php on line 17
+[24-Oct-2023 01:57:17 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function User::__construct(), 11 passed in /home/chrisste/public_html/AnimangaBackEnd/service/searchFriendByUserName.php on line 42 and exactly 12 expected in /home/chrisste/public_html/AnimangaBackEnd/model/user.php:17
+Stack trace:
+#0 /home/chrisste/public_html/AnimangaBackEnd/service/searchFriendByUserName.php(42): User->__construct('1', 'chris_slash10', 'Christian Ivan ...', 'H', '28', 'Mexico-17', 'christian.100@g...', '', '44200', '14880', '/9j/4AAQSkZJRgA...')
+#1 /home/chrisste/public_html/AnimangaBackEnd/service/searchFriendByUserName.php(8): searchFriend()
+#2 {main}
+  thrown in /home/chrisste/public_html/AnimangaBackEnd/model/user.php on line 17
+[24-Oct-2023 02:05:53 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function User::__construct(), 11 passed in /home/chrisste/public_html/AnimangaBackEnd/service/searchFriendByUserName.php on line 43 and exactly 12 expected in /home/chrisste/public_html/AnimangaBackEnd/model/user.php:17
+Stack trace:
+#0 /home/chrisste/public_html/AnimangaBackEnd/service/searchFriendByUserName.php(43): User->__construct('1', 'chris_slash10', 'Christian Ivan ...', 'H', '28', 'Mexico-17', 'christian.100@g...', '', '44200', '14880', '/9j/4AAQSkZJRgA...')
+#1 /home/chrisste/public_html/AnimangaBackEnd/service/searchFriendByUserName.php(8): searchFriend()
+#2 {main}
+  thrown in /home/chrisste/public_html/AnimangaBackEnd/model/user.php on line 17
+[24-Oct-2023 02:05:53 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function User::__construct(), 11 passed in /home/chrisste/public_html/AnimangaBackEnd/service/searchFriendByUserName.php on line 43 and exactly 12 expected in /home/chrisste/public_html/AnimangaBackEnd/model/user.php:17
+Stack trace:
+#0 /home/chrisste/public_html/AnimangaBackEnd/service/searchFriendByUserName.php(43): User->__construct('1', 'chris_slash10', 'Christian Ivan ...', 'H', '28', 'Mexico-17', 'christian.100@g...', '', '44200', '14880', '/9j/4AAQSkZJRgA...')
+#1 /home/chrisste/public_html/AnimangaBackEnd/service/searchFriendByUserName.php(8): searchFriend()
+#2 {main}
+  thrown in /home/chrisste/public_html/AnimangaBackEnd/model/user.php on line 17
+[24-Oct-2023 02:06:06 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function User::__construct(), 11 passed in /home/chrisste/public_html/AnimangaBackEnd/service/searchFriendByUserName.php on line 43 and exactly 12 expected in /home/chrisste/public_html/AnimangaBackEnd/model/user.php:17
+Stack trace:
+#0 /home/chrisste/public_html/AnimangaBackEnd/service/searchFriendByUserName.php(43): User->__construct('1', 'chris_slash10', 'Christian Ivan ...', 'H', '28', 'Mexico-17', 'christian.100@g...', '', '44200', '14880', '/9j/4AAQSkZJRgA...')
+#1 /home/chrisste/public_html/AnimangaBackEnd/service/searchFriendByUserName.php(8): searchFriend()
+#2 {main}
+  thrown in /home/chrisste/public_html/AnimangaBackEnd/model/user.php on line 17
+[24-Oct-2023 02:06:41 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function User::__construct(), 11 passed in /home/chrisste/public_html/AnimangaBackEnd/service/searchFriendByUserName.php on line 43 and exactly 12 expected in /home/chrisste/public_html/AnimangaBackEnd/model/user.php:17
+Stack trace:
+#0 /home/chrisste/public_html/AnimangaBackEnd/service/searchFriendByUserName.php(43): User->__construct('1', 'chris_slash10', 'Christian Ivan ...', 'H', '28', 'Mexico-17', 'christian.100@g...', '', '44200', '14880', '/9j/4AAQSkZJRgA...')
+#1 /home/chrisste/public_html/AnimangaBackEnd/service/searchFriendByUserName.php(8): searchFriend()
+#2 {main}
+  thrown in /home/chrisste/public_html/AnimangaBackEnd/model/user.php on line 17
+[24-Oct-2023 02:15:44 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function User::__construct(), 11 passed in /home/chrisste/public_html/AnimangaBackEnd/service/searchFriendByUserName.php on line 43 and exactly 12 expected in /home/chrisste/public_html/AnimangaBackEnd/model/user.php:17
+Stack trace:
+#0 /home/chrisste/public_html/AnimangaBackEnd/service/searchFriendByUserName.php(43): User->__construct('1', 'chris_slash10', 'Christian Ivan ...', 'H', '28', 'Mexico-17', 'christian.100@g...', '', '44200', '14880', '/9j/4AAQSkZJRgA...')
+#1 /home/chrisste/public_html/AnimangaBackEnd/service/searchFriendByUserName.php(8): searchFriend()
+#2 {main}
+  thrown in /home/chrisste/public_html/AnimangaBackEnd/model/user.php on line 17
+[24-Oct-2023 02:20:47 UTC] PHP Notice:  Undefined index: U_ESFERAS in /home/chrisste/public_html/AnimangaBackEnd/service/searchFriendByUserName.php on line 83
+[24-Oct-2023 02:20:47 UTC] PHP Notice:  Undefined index: U_ESFERAS in /home/chrisste/public_html/AnimangaBackEnd/service/searchFriendByUserName.php on line 83
+[24-Oct-2023 02:20:47 UTC] PHP Notice:  Undefined index: U_ESFERAS in /home/chrisste/public_html/AnimangaBackEnd/service/searchFriendByUserName.php on line 83
+[24-Oct-2023 02:23:34 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/chrisste/public_html/AnimangaBackEnd/service/getAllFriendsByUser.php on line 56

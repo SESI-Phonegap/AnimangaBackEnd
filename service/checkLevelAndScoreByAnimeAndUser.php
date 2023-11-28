@@ -10,6 +10,7 @@ function ServieCheckLevelAndScorByUser(){
 	if (isset($_POST['userName']) && isset($_POST['pass']) && isset($_POST['anime']) && isset($_POST['iduser'])) {
 		//if(true){
 		     $user =  $_POST['userName'];
+			 $user = urldecode($user);
 	         $pass = $_POST['pass'];
 			 $idAnime = $_POST['anime'];
 			 $idUser = $_POST['iduser'];

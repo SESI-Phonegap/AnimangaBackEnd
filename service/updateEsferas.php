@@ -8,6 +8,7 @@ updateEsferas();
 function updateEsferas(){
 		if (isset($_POST['userName']) && isset($_POST['pass']) && isset($_POST['iduser']) && isset($_POST['esferas'])) {
 			 $user =  $_POST['userName'];
+			 $user = urldecode($user);
 	         $pass = $_POST['pass'];
 			 $esferas = $_POST['esferas'];
 			 $idUser = $_POST['iduser'];

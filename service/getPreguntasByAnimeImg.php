@@ -11,6 +11,7 @@ function questionsByAnimeImg(){
 	if (isset($_POST['userName']) && isset($_POST['pass']) && isset($_POST['anime'])) {
 		//if(true){
 		$user =  $_POST['userName'];
+		$user = urldecode($user);
 	    $pass = $_POST['pass'];
         $idanime = $_POST['anime'];
         /*$user = 'chris_slash10';

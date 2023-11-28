@@ -12,6 +12,7 @@ function getAllFriendsByUser(){
 	//	if(true){
 	
 		$user =  $_POST['userName'];
+		$user = urldecode($user);
         $pass = $_POST['pass'];
         
      /*   $user =  "chris_slash10";

@@ -7,6 +7,7 @@ addFriend();
 function addFriend(){
     if (isset($_POST['userName']) && isset($_POST['pass']) && isset($_POST['iduser']) && isset($_POST['idFriend'])) {
         $user =  $_POST['userName'];
+        $user = urldecode($user);
 	    $pass = $_POST['pass'];
         $idUser = $_POST['iduser'];
         $idFriend = $_POST['idFriend'];
