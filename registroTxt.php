@@ -36,7 +36,6 @@ if ($queryInsertQuestion) {
             $queryInsertAnswer = $db->consulta(UtilBd::registraRespuesta($idLastQuestion,$respuesta2,0));
             $queryInsertAnswer = $db->consulta(UtilBd::registraRespuesta($idLastQuestion,$respuesta3,0));
             $queryInsertAnswer = $db->consulta(UtilBd::registraRespuesta($idLastQuestion,$respuesta4,0));
-            $db->closeConection();
             echo "Inserto ".$count++;
         }
     }
@@ -44,6 +43,7 @@ if ($queryInsertQuestion) {
 			echo "<script>alert('Error: No se pudo guardar');</script>";
 		}
 }
+$db->closeConection();
 
 fclose($fp);
 ?>
