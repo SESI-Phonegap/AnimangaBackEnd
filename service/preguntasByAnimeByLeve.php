@@ -23,7 +23,7 @@ function questionsByAnimeAndLevel(){
 		
 	//	$registros = array();
 		
-		if ($user != null && $level != null && $idanime != null) {
+		if ($user != null && $idanime != null) {
 		    $db = new MysqlCon();
 			$db->conectar();
 			$loginConsulta = $db->consulta(UtilBd::login($user,$pass));
