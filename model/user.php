@@ -28,6 +28,10 @@ class User{
 		 $this->imgUser = $imgUser;
 		 $this->esferas = $esferas;
 	 }
+
+	 public function getCoins() {
+		return $this->coins;
+	 }
 }
 
 ?>
