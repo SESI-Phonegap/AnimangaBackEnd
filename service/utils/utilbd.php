@@ -202,18 +202,18 @@ class UtilBd{
   *Obtine los animes disponibles para quiz
   */
   public static function getAllAnimes(){
-  	return "SELECT * FROM TB_ANIME WHERE AN_ACTIVO = 1;";
+  	return "SELECT * FROM TB_ANIME WHERE AN_ACTIVO = 1 ORDER BY AN_ANIME ASC;";
   }
 
   /*
   *Obtine los animes disponibles para IMG Quiz
   */
   public static function getAllAnimesImg(){
-  	return "SELECT * FROM TB_ANIME WHERE AN_ACTIVO_IMG = 1;";
+  	return "SELECT * FROM TB_ANIME WHERE AN_ACTIVO_IMG = 1 ORDER BY AN_ANIME ASC;";
   }
 
   public static function getAllAnimesForWallpaper(){
-    return "SELECT * FROM TB_ANIME;";
+    return "SELECT * FROM TB_ANIME ORDER BY AN_ANIME ASC;";
   }
   
   public static function getWallpaperByAnime($idAnime){
