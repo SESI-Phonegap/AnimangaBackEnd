@@ -10,7 +10,7 @@ function getAvatarsByUser(){
 	$requestJson = file_get_contents('php://input');
 	$json = json_decode($requestJson);
 	if (isset($json) ) {
-		     $user =  $json->userName;
+		     $user =  $json->email;
 	         $pass = $json->pass;
 			 $idUser = $json->iduser;
 			

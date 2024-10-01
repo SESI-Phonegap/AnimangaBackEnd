@@ -8,7 +8,8 @@ class MysqlCon{
   public function conectar(){ 
 
       //Produccion
-      $this->conexion = new mysqli('localhost','chrisste_chrisste','5pq4dB!7Ip[IP4','chrisste_ANIMANGA_DB','3306');//mysqli_connect('192.168.1.66','root','Abril1531Mexic@','animanga','3306');
+      //$this->conexion = new mysqli('localhost','root','','Animangaquiz','3306');
+      $this->conexion = new mysqli('http://54.177.175.213/','root','Abril-1531','Animangaquiz','3306');
       mysqli_set_charset($this->conexion, "utf8");
       if($this->conexion -> connect_errno){
         echo "<script>console.log('Conexion Exitosa')</script>";
