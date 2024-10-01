@@ -6,13 +6,14 @@ include "utils/mysql.php";
 updateAvatar();
 
 function updateAvatar(){
-		if (isset($_POST['userName']) && isset($_POST['pass']) && isset($_POST['iduser']) && isset($_POST['b64Avatar'])) {
-		//if(true){
-			 $user =  $_POST['userName'];
-			 $user = urldecode($user);
-	         $pass = $_POST['pass'];
-			 $b64Avatar = $_POST['b64Avatar'];
-			 $idUser = $_POST['iduser'];
+	$requestJson = file_get_contents('php://input');
+	$json = json_decode($requestJson);
+		if (isset($json)) {
+		
+			 $user =  $json->email;
+	         $pass = $json->pass;
+			 $b64Avatar = $json->b64Avatar;
+			 $idUser = $json->iduser;
 			 
 			 
 			 if ($user != null && $b64Avatar != null && $idUser != null) {

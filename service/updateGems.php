@@ -7,12 +7,13 @@ include "../model/user.php";
 updateGemas();
 
 function updateGemas(){
-		if (isset($_POST['userName']) && isset($_POST['pass']) && isset($_POST['iduser']) && isset($_POST['gems'])) {
-			 $user =  $_POST['userName'];
-			 $user = urldecode($user);
-	         $pass = $_POST['pass'];
-			 $gems = $_POST['gems'];
-			 $idUser = $_POST['iduser'];
+	$requestJson = file_get_contents('php://input');
+	$json = json_decode($requestJson);
+		if (isset($json)) {
+			 $user =  $json->email;
+	         $pass = $json->pass;
+			 $gems = $json->gems;
+			 $idUser = $json->iduser;
 			 $usuario = null;
 			 
 			 if ($user != null && $gems != null && $idUser != null) {

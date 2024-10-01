@@ -7,12 +7,12 @@ include "../model/wallpaper.php";
 getAvatarsByAnimes();
 
 function getAvatarsByAnimes(){
-	if (isset($_POST['userName']) && isset($_POST['pass']) && isset($_POST['anime']) ) {
-		//if(true){
-		     $user =  $_POST['userName'];
-			 $user = urldecode($user);
-	         $pass = $_POST['pass'];
-			 $idAnime = $_POST['anime'];
+	$requestJson = file_get_contents('php://input');
+	$json = json_decode($requestJson);
+	if (isset($json) ) {
+		     $user =  $json->email;
+	         $pass = $json->pass;
+			 $idAnime = $json->anime;
 			
 			 
 			 if ($user != null && $idAnime != null) {

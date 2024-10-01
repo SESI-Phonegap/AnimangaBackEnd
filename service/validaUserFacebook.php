@@ -8,10 +8,11 @@ include "../model/user.php";
 loginUser();
 
 function loginUser(){
-	 if (isset($_POST['userName'])) {
-		//if(true){
+	$requestJson = file_get_contents('php://input');
+	$json = json_decode($requestJson);
+	 if (isset($json)) {
 	
-		$user =  $_POST['userName'];
+		$user =  $json->userName;
 		$usuario = null;
 		 
 		 if ($user != null) {

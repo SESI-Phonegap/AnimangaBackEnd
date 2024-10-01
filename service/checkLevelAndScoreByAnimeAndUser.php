@@ -7,13 +7,14 @@ include "../model/score.php";
 ServieCheckLevelAndScorByUser();
 
 function ServieCheckLevelAndScorByUser(){
-	if (isset($_POST['userName']) && isset($_POST['pass']) && isset($_POST['anime']) && isset($_POST['iduser'])) {
-		//if(true){
-		     $user =  $_POST['userName'];
-			 $user = urldecode($user);
-	         $pass = $_POST['pass'];
-			 $idAnime = $_POST['anime'];
-			 $idUser = $_POST['iduser'];
+	$requestJson = file_get_contents('php://input');
+	$json = json_decode($requestJson);
+	
+	if (isset($json)) {
+		     $user =  $json->email;
+	         $pass = $json->pass;
+			 $idAnime = $json->anime;
+			 $idUser = $json->iduser;
 			/* $user = 'chris_slash10';
 			 $pass = 'Mexico-17';
 			 $idAnime = 1;

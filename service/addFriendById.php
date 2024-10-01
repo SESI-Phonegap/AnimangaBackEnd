@@ -5,12 +5,14 @@ include "utils/mysql.php";
 addFriend();
 
 function addFriend(){
-    if (isset($_POST['userName']) && isset($_POST['pass']) && isset($_POST['iduser']) && isset($_POST['idFriend'])) {
-        $user =  $_POST['userName'];
-        $user = urldecode($user);
-	    $pass = $_POST['pass'];
-        $idUser = $_POST['iduser'];
-        $idFriend = $_POST['idFriend'];
+    $requestJson = file_get_contents('php://input');
+	$json = json_decode($requestJson);
+
+    if (isset($json)) {
+        $user =  $json->email;
+	    $pass = $json->pass;
+        $idUser = $json->iduser;
+        $idFriend = $json->idFriend;
 
         if($user != null && $idUser != null && $idFriend != null) {
             $db = new MysqlCon();

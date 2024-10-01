@@ -8,15 +8,12 @@ include "../model/respuestas.php";
 questionsByAnimeImg();
 
 function questionsByAnimeImg(){
-	if (isset($_POST['userName']) && isset($_POST['pass']) && isset($_POST['anime'])) {
-		//if(true){
-		$user =  $_POST['userName'];
-		$user = urldecode($user);
-	    $pass = $_POST['pass'];
-        $idanime = $_POST['anime'];
-        /*$user = 'chris_slash10';
-	    $pass = 'Mexico-17';
-		$idanime = 1;*/
+	$requestJson = file_get_contents('php://input');
+	$json = json_decode($requestJson);
+	if (isset($json)) {
+		$user =  $json->email;
+	    $pass = $json->pass;
+        $idanime = $json->anime;
 		
 		if ($user != null && $idanime != null) {
 		    $db = new MysqlCon();

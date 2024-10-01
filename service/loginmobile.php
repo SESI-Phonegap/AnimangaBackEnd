@@ -8,11 +8,12 @@ include "../model/user.php";
 loginUser();
 
 function loginUser(){
-	 if (isset($_POST['email']) && isset($_POST['pass'])) {
+	$requestJson = file_get_contents('php://input');
+	$json = json_decode($requestJson);
+	 if (isset($json)) {
 	
-		$email =  $_POST['email'];
-		$email = urldecode($email);
-	    $pass = $_POST['pass'];
+		$email =  $json->email;
+	    $pass = $json->pass;
 		$usuario = null;
 
 		 

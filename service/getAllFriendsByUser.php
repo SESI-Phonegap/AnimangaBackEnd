@@ -8,16 +8,12 @@ include "../model/user.php";
 getAllFriendsByUser();
 
 function getAllFriendsByUser(){
-    if (isset($_POST['userName']) && isset($_POST['pass'])) {
-	//	if(true){
+	$requestJson = file_get_contents('php://input');
+	$json = json_decode($requestJson);
+    if (isset($json)) {
 	
-		$user =  $_POST['userName'];
-		$user = urldecode($user);
-        $pass = $_POST['pass'];
-        
-     /*   $user =  "chris_slash10";
-	    $pass = "Mexico-17";*/
-	 
+		$user =  $json->email;
+        $pass = $json->pass;
         
         $usuario = null;
         if ($user != null) {

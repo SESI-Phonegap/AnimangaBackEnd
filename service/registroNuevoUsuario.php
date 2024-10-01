@@ -7,16 +7,18 @@ nuevoUsuario();
 
 function nuevoUsuario(){
 
-		if (isset($_POST['userNameFriend']) && isset($_POST['userName']) && isset($_POST['pass']) && isset($_POST['nombre']) && isset($_POST['email']) 
-			&& isset($_POST['edad']) && isset($_POST['genero'])) {
+	$requestJson = file_get_contents('php://input');
+	$json = json_decode($requestJson);
 
-			 $userNameFirend = $_POST['userNameFriend'];
-			 $userName =  $_POST['userName'];
-	         $pass = $_POST['pass'];
-			 $nombre = $_POST['nombre'];
-			 $email = $_POST['email'];
-			 $edad = $_POST['edad'];
-			 $genero = $_POST['genero'];
+		if (isset($json)) {
+
+			 $userNameFirend = $json->userNameFriend;
+			 $userName =  $json->userName;
+	         $pass = $json->pass;
+			 $nombre = $json->nombre;
+			 $email = $json->email;
+			 $edad = $json->edad;
+			 $genero = $json->genero;
 			 
 				 $db = new MysqlCon();
 				 $db->conectar();

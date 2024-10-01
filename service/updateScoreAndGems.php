@@ -9,24 +9,17 @@ include "../model/user.php";
 serviceUpdateScoreAndGems();
 
 function serviceUpdateScoreAndGems(){
-	if (isset($_POST['userName']) && isset($_POST['pass']) && isset($_POST['gems']) && isset($_POST['score']) && isset($_POST['level']) && isset($_POST['iduser']) && isset($_POST['anime'])) {
-		//if(true){
-		   $user =  $_POST['userName'];
-		   $user = urldecode($user);
-	         $pass = $_POST['pass'];
-			 $gems = $_POST['gems'];
-			 $score = $_POST['score'];
-			 $level = $_POST['level'];
-			 $idUser = $_POST['iduser'];
-			 $idAnime = $_POST['anime'];
-			/* $user = 'chris_slash10';
-			 $pass = 'Mexico-17';
-			 $gems = 50;
-			 $score = 600;
-			 $level = 1;
-			 $idUser = 1;
-			 $idAnime = 1;*/
-			 
+	$requestJson = file_get_contents('php://input');
+	$json = json_decode($requestJson);
+	if (isset($json)) {
+		  	 $user =  $json->email;
+	         $pass = $json->pass;
+			 $gems = $json->gems;
+			 $score = $json->score;
+			 $level = $json->level;
+			 $idUser = $json->iduser;
+			 $idAnime = $json->anime;
+	
 			 if ($user != null && $gems != null && $score != null && $level != null && $idUser != null && $idAnime != null) {
 				 $db = new MysqlCon();
 				 $db->conectar();

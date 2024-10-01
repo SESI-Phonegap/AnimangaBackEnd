@@ -9,19 +9,13 @@ include "../model/respuestas.php";
 questionsByAnimeAndLevel();
 
 function questionsByAnimeAndLevel(){
-	if (isset($_POST['userName']) && isset($_POST['pass']) && isset($_POST['anime']) && isset($_POST['level'])) {
-		//if(true){
-		$user =  $_POST['userName'];
-		$user = urldecode($user);
-	    $pass = $_POST['pass'];
-		$level = $_POST['level'];
-		$idanime = $_POST['anime'];
-		/*$user = 'chris_slash10';
-	    $pass = 'Mexico-17';
-		$level = 1;
-		$idanime = 1;*/
-		
-	//	$registros = array();
+	$requestJson = file_get_contents('php://input');
+	$json = json_decode($requestJson);
+	if (isset($json)) {
+		$user =  $json->email;
+	    $pass = $json->pass;
+		$level = $json->level;
+		$idanime = $json->anime;
 		
 		if ($user != null && $idanime != null) {
 		    $db = new MysqlCon();

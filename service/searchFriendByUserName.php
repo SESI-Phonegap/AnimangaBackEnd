@@ -8,18 +8,13 @@ include "../model/user.php";
 searchFriend();
 
 function searchFriend(){
-	 if (isset($_POST['userName']) && isset($_POST['pass']) && isset($_POST['userNameQuery'])) {
-		//if(true){
-	
-		$user =  $_POST['userName'];
-		$user = urldecode($user);
-	    $pass = $_POST['pass'];
-	    $userNameQuery = $_POST['userNameQuery'];
-
-	/*    $user =  "chris_slash109";
-	    $pass = "mmmn";
-	    $userNameQuery = "edga";
-	*/
+	$requestJson = file_get_contents('php://input');
+	$json = json_decode($requestJson);
+	 if (isset($json)) {
+		
+		$user =  $json->email;
+	    $pass = $json->pass;
+	    $userNameQuery = $json->userNameQuery;
 		
 		 $usuario = null;
 		 

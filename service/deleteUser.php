@@ -6,13 +6,13 @@ include "utils/mysql.php";
 deleteUser();
 
 function deleteUser(){
-    if (isset($_POST['email']) && isset($_POST['pass']) && isset($_POST['iduser'])) {
+    $requestJson = file_get_contents('php://input');
+	$json = json_decode($requestJson);
+    if (isset($json)) {
 
-        $email =  $_POST['email'];
-		$email = urldecode($email);
-	    $pass = $_POST['pass'];
-        $iduser = $_POST['iduser'];
-		$usuario = null;
+        $email =  $json->email;
+	    $pass = $json->pass;
+        $iduser = $json->iduser;
 
         if ($email != null && $pass != null && $iduser != null) {
             $db = new MysqlCon();

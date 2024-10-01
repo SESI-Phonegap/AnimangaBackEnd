@@ -1,23 +1,24 @@
-¿Cuál es el nombre del primer titán que aparece en Attack on Titan?|2|20|37|Titán Colosal|Titán Acorazado|Titán de Ataque|Titán Sonriente
-¿Cuál es el nombre de la madre de Eren Yeager?|2|20|37|Carla|Mikasa|Annie|Historia
-¿Quien es el "Titán de Ataque" en Attack on Titan?|2|20|37|Eren Yeager|Levi Ackerman|Annie Leonhart|Reiner Braun
-¿Quién es el instructor de entrenamiento de los reclutas en el 104º Regimiento de Cadetes?|2|20|37|Keith Shadis|Erwin Smith|Dot Pixis|Nile Dok
-¿Cuál es el nombre del escuadrón de élite liderado por Levi Ackerman?|2|20|37|Escuadrón de Limpieza|Escuadrón de Exploración|Escuadrón de Maniobras|Escuadrón de Asalto
-¿Qué arma se utiliza comúnmente para luchar contra los titanes en Attack on Titan?|2|20|37|Espadas|Pistolas|Arcos|Mazos
-¿Cuál es el nombre del titán que tiene habilidades de endurecimiento?|2|20|37|Titán Acorazado|Titán Colosal|Titán Mandíbula|Titán Hembra
-¿Qué habilidad posee el Titán Bestia?|2|20|37|Inteligencia|Fuerza|Regeneración|Velocidad
-¿Quién es el hermano mayor de Mikasa?|2|20|37|Levi Ackerman|Eren Yeager|Armin Arlert|Jean Kirstein
-¿Cuál es el objetivo principal de la misión de recuperación en el anime?|2|20|37|Rescatar a Eren|Asesinar a un Titán|Recuperar el muro María|Capturar a un Titán
-¿Cuál es el título del último episodio de la primera temporada de Attack on Titan?|2|20|37|"Scream"|"Bite"|"Hero"|"Beast Titan"
-¿Quién lidera el grupo de los Guerreros en Marley?|2|20|37|Reiner Braun|Bertolt Hoover|Annie Leonhart|Historia Reiss
-¿Qué se descubre sobre los titanes al final de la primera temporada?|2|20|37|Son seres humanos transformados|Son extraterrestres|Son robots controlados por humanos|Son creaciones de una fuerza divina
-¿Qué poderes obtiene Eren después de ser inyectado con suero de titán?|2|20|37|Poder de transformación en titán|Poder de control mental|Poder de regeneración|Poder de endurecimiento
-¿Cuál es el nombre del segundo titán que aparece en Attack on Titan?|2|20|37|Titán Sonriente|Titán de Ataque|Titán Acorazado|Titán Colosal
-¿Cuál es el nombre del mejor amigo de Eren Yeager?|2|20|37|Armin Arlert|Jean Kirstein|Connie Springer|Sasha Blouse
-¿Quién es el líder del grupo de guerreros infiltrados en Paradis?|2|20|37|Zeke Yeager|Annie Leonhart|Bertolt Hoover|Reiner Braun
-¿Cuál es el título del primer episodio de la segunda temporada de Attack on Titan?|2|20|37|"Beast Titan"|"Southwestward"|"Soldier"|"Best Left"
-¿Quién es el líder del culto que adora a los titanes?|2|20|37|Pastor Nick|Ymir Fritz|Kenny Ackerman|Rod Reiss
-¿Cuál es el nombre del pueblo de origen de Eren Yeager?|2|20|37|Ragako|Wall Rose|Trost|Shiganshina
-¿Quién es el verdadero Titán Bestia?|2|20|37|Zeke Yeager|Eren Yeager|Bertolt Hoover|Reiner Braun
-¿Cuál es el nombre del padre de Historia Reiss?|2|20|37|Rod Reiss|Uri Reiss|Kenny Ackerman|Eren Kruger
-¿Quién es el comandante supremo de todas las fuerzas militares en Paradis?|2|20|37|Darius Zackly|Keith Shadis|Erwin Smith|Dot Pixis
+¿Cuál es el nombre del protagonista de "Sword Art Online"?|2|20|31|Kirito|Asuna|Eugeo|Klein
+¿Cuál es el nombre del primer juego de realidad virtual en el que se ambienta la serie "Sword Art Online"?|2|20|31|Aincrad|Underworld|Gun Gale Online|Alfheim Online
+¿Qué sucede si un jugador muere en "Sword Art Online"?|2|20|31|Muere en el mundo real|Pierde su cuenta|Respawn en el juego|Pierde una vida pero permanece en el juego
+¿Cuál es el nombre del juego al que los jugadores son transportados después de "Sword Art Online"?|2|20|31|Alfheim Online|Gun Gale Online|ALO|Underworld
+¿Cuál es el arma principal de Kirito en "Sword Art Online"?|2|20|31|Espada|Arco|Lanza|Hacha
+¿Cuál es el nombre de la habilidad única de Kirito en "Sword Art Online"?|2|20|31|Starburst Stream|Excalibur|Dark Repulser|Elucidator
+¿Quién es la amiga cercana de Kirito que también es una hábil jugadora de "Sword Art Online"?|2|20|31|Asuna|Silica|Lisbeth|Leafa
+¿Cuál es el nombre del gremio liderado por Asuna en "Sword Art Online"?|2|20|31|Knights of the Blood Oath|Laughing Coffin|Sleeping Knights|Fuurinkazan
+¿Qué hacen los jugadores en "Sword Art Online" después de descubrir que están atrapados en el juego?|2|20|31|Completan los niveles del juego para alcanzar el piso final y liberarse|Luchan contra otros jugadores|Forman clanes para luchar contra monstruos|Buscan una salida
+¿Cuál es el nombre del creador de "Sword Art Online"?|2|20|31|Akihiko Kayaba|Shouzou Yuuki|Seijirou Kikuoka|Nobuyuki Sugou
+¿Cuál es el nombre del hermano adoptivo de Kirito, quien también es un jugador en "Sword Art Online"?|2|20|31|Eugeo|Klein|Leafa|Sinon
+¿Cuál es el objetivo principal de Kirito en "Sword Art Online"?|2|20|31|Liberar a todos los jugadores atrapados en el juego|Convertirse en el jugador más fuerte|Destruir el juego|Encontrar al creador del juego
+¿Cuál es el nombre del segundo juego de realidad virtual en la serie "Sword Art Online"?|2|20|31|Gun Gale Online|Alfheim Online|Aincrad|Underworld
+¿Qué arma usa Sinon en "Gun Gale Online"?|2|20|31|Rifle de francotirador|Espada|Arco|Hacha
+¿Qué jugador es conocido como el "Asesino de la Espada" en "Gun Gale Online"?|2|20|31|Death Gun|XaXa|Johnny Black|PoH
+¿Cuál es el nombre del personaje que se convierte en el enemigo principal en "Gun Gale Online"?|2|20|31|Death Gun|XaXa|Johnny Black|PoH
+¿Quién es el creador de "Gun Gale Online"?|2|20|31|Seijirou Kikuoka|Shouzou Yuuki|Akihiko Kayaba|Nobuyuki Sugou
+¿Cuál es el nombre del juego en realidad virtual en "Sword Art Online: Alicization"?|2|20|31|Underworld|Alfheim Online|Gun Gale Online|Aincrad
+¿Quién es el personaje principal en "Sword Art Online: Alicization"?|2|20|31|Kirito|Asuna|Eugeo|Sinon
+¿Qué hace el proyecto "Alicization" en "Sword Art Online: Alicization"?|2|20|31|Crea inteligencias artificiales|Mejora la experiencia de juego|Permite a los jugadores viajar entre mundos|Desarrolla nuevas armas
+¿Cuál es el nombre del mundo virtual en el que se desarrolla la mayor parte de "Sword Art Online: Alicization"?|2|20|31|Underworld|Alfheim Online|Gun Gale Online|Aincrad
+¿Qué función cumple Alice en "Sword Art Online: Alicization"?|2|20|31|Es una inteligencia artificial|Es la líder de un gremio|Es un personaje no jugable|Es una amiga de Kirito
+¿Quién es el antagonista principal en "Sword Art Online: Alicization"?|2|20|31|Gabriel Miller|Quinella|Administrator|Eugeo
+¿Cuál es el objetivo principal de Kirito en "Sword Art Online: Alicization"?|2|20|31|Entender el misterio de Underworld|Rescatar a Alice|Destruir el mundo virtual|Desbloquear el piso final
